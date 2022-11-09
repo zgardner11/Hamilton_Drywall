@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Thasadith:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+  --main-bg-color: linear-gradient( to bottom, var(--navbar), var(--silverblue));
+  --reverse-bg-color: linear-gradient( to top, var(--silverblue), white);
+  --purple: #160035;
+  --logored:#8A001f;
+  --navbar:#C3DDEC;
+  --darkgreen: #001e04;
+  --green:rgba(0, 70, 0, 0.513);
+  --white:hsla(192, 10%, 90%, 0.979);
+  --lightblue: #6fa8be;  
+  --skyblue:hsla(192, 100%, 79%, 0.979);
+  --silverblue:#3e6586;
+  --lightgradient: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.4)
+  );
+  --headerfont: 2.2rem;
+  --largefont: 2rem;
+  --mediumfont:1.5rem;
+  --smallfont: 1.25rem;
+  --textfont: 1.1rem;
+}
+
+* {
+  box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'EB Garamond', serif; 
+  font-weight: 100;
+  line-height: 1.5;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none; /* takes bullet points out */
+}
+
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+h2, h3{
+  line-height: 1.6;
+  text-align: center;
+}
+
+h4{
+  font-family: 'EB Garamond', serif;
+  font-size: var(--textfont);
+  text-align: center;
+  font-weight: 200;
+}
+
+h5{
+  padding: 2rem;
+  text-align: center;
+}
+
+p{
+  line-height: 1.6;
+}
+
+img {
+  width: 100%; /*keep images inside box container*/
+}
+
+a {
+  text-decoration: none; /* takes underline out*/
+  font-weight: 100;
+}
+
+a:visited{
+  color: aliceblue;
+}
+
+a:active{   /* emulates pressing of button in 3d space */
+  top: 1px;
+}
+
+form{
+  font-family: 'Outfit', sans-serif;
+}
+
+main{
+  /* background-color: var(--navbar); */
+  height: 100vh;
+}
+
+/* navigation */
+
+#navbar {
+  display: flex;
+  position: sticky;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar);
+  color:hsla(192, 10%, 90%, 0.979);
+  height: 8vh;
+  margin-right: auto;
+  top: 0;
+  z-index: 1111;
+}
+
+.logo {
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  margin-left: 2rem;
+  color: var(--white);
+  font-size: var(--smallfont);
+  padding: 1.5rem;
+  font-weight: 100;
+  transition: color 500ms ease-out;
+}
+
+.logo:hover{
+  color: var(--wine);
+}
+
+#nav-logo{
+    width: 13em;
+    position: relative;
+    top: 4.5vh;
+}
+
+.navlinks{
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  position: relative;
+  width: 100%;
+  right: 0;
+  margin-left: auto;
+}
+
+.navlinks ul {
+  display: flex; /*align navbar items in horizontal row */
+  width: 100%;
+  flex: 1;
+  align-items: center;
+}
+
+.navlinks ul li{
+  flex: 1;
+}
+
+.navlinks li a {
+  display: flex;
+  color: black;
+  padding: 1rem;
+  height: 80%;
+  /* margin-right: 2rem; */
+  font-weight: 200;
+  position: relative;
+  justify-content: center;
+  font-size: var(--textfont);
+}
+
+.navlinks li a:hover {
+  color:var(--logored);
+}
+
+.navlinks li a:after {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--logored);
+  height: 2px;
+
+}
+
+.navlinks ul li>a:hover:after {
+  width: 50%;
+}
+
+nav a,
+nav a:after,
+nav a:before {
+  transition: all .4s;
+}
+
+.book-button{
+  background-color: var(--silverblue);
+  color:aliceblue;
+  padding: 1.5rem 2rem;
+  height: 80%;
+  width: fit-content;
+  font-size: 1rem;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-overflow: none;
+  border-radius: .8rem;
+  border: var(--skyblue) .5px solid;
+  transition: border-radius 750ms ease-out, background-color 500ms ease-out;
+}
+
+.book-button:hover{
+  background-color: rgb(214, 75, 0);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.book-button.active{
+  background-color: rgb(214, 75, 0);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+nav .book-button{
+  margin: auto 5rem auto 4rem;
+}
+
+.contact-nav{
+  border-right: var(--silverblue) solid 2px;
+}
+
+#nav-search{
+    display: flex;
+    width: 2.2em;
+    margin: auto;
+}
+
+#nav-search:hover{
+    cursor: pointer;
+}
+
+/* main */
+
+#main-wrap{
+  background-color: #160035;
+  height: 100vh;
+}
+
+#main-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  color: aliceblue;
+  height: 100vh;
+  position: relative;
+  top: 5rem;
+  padding: 2rem;
+  border: aliceblue solid 4px;
+  height: fit-content;
+}
+
+.main-header-shape{
+  width: 30em;
+  background-color: var(--logored);
+  color: aliceblue;
+  padding: 3rem 2rem;
+  border-radius: .7em;
+}
+/* finishing products */
+
+.flip-card {
+  background-color: transparent;
+  width: 20em;
+  height: 15em;
+  border: 1px solid #f1f1f1;
+  border-radius: 1em;
+  padding: 1rem;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* contact page */
+
+.contact-main{
+    height: fit-content;
+    position: relative;
+    background: var(--main-bg-color);
+  }
+  
+  .contact-main header{
+    height: fit-content;
+    max-width: 30%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .contact-main h3{
+    text-align: start;
+    margin: 0 0 0 7%;
+    padding-top: 11%;
+    color: aliceblue;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    font-size: var(--mediumfont);
+  }
+  
+  .contact-main h4{
+    margin-left: 50%;
+    padding-top: 10%;
+    color: rgba(198, 195, 189, 0.889);
+    width: 40%;
+    font-size: 16px;
+    text-align: end;
+  }
+  
+  #contact-wrapper{
+    height: fit-content;
+  }
+  
+  #contact-form{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-auto-rows: fit-content;
+    gap: 2rem;
+    width: 90%;
+    max-width: 35rem;
+    height: fit-content;
+    padding: 7rem;
+    margin: 3vh auto 0;
+    backdrop-filter: blur(2rem);
+    box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
+    border: 4px rgba(255, 255, 255, 0.155) solid;
+    border-radius: .8rem;
+    font-weight: 100;
+  }
+  
+  label{
+    color: white;
+    font-size: var(--smallfont);
+    font-weight: 200;
+  } 
+  
+  input, textarea {
+    color: white;
+    width: 100%;
+    max-width: 25rem;
+    margin-top: 1rem;
+    padding: .3rem .7rem;
+    outline: 0;
+    border: 3px rgba(255, 255, 255, 0.462) solid;
+    border-radius: .4rem .2rem;
+    background: transparent;
+    font-size: 1rem;
+  }
+  
+  .contact-date{
+    margin: .5rem 0;
+    width: min-content;
+  }
+  
+  form p{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    color:  blue;
+  }
+  
+  button{
+    background: none;
+    border: none;
+  }
+  
+  #contactbutton{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #contactbutton.bookpage{
+    /* border: red solid 3px; */
+    margin: 3rem auto 2rem;
+  }
+  
+  #bookdisclaimer{
+    /* padding-top: 1rem; */
+    /* border: black solid 3px; */
+    font-size: 14px;
+  }
+
+  /* footer */
+
+  footer{
+    background-color: var(--logored);
+    color: aliceblue;
+    text-align: center;
+  }
+
+  footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+    margin: 0 auto;
+    padding: 2em;
+    width: 50%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+  }
+
+  .footer-item{
+    padding: 1em;
+  
+    width: 50%;
+    margin: auto;
+  }
+
+@media only screen and (max-width: 1070px) {
+  
+    html{
+      /* overflow-y: hidden; */
+      overflow-x: hidden;
+    }
+  
+    header > h2{
+      transition: 1000ms font-size;
+      font-size: 2rem;
+      text-align: start;
+    }
+  
+    header > h3{
+      font-size: var(--textfont);
+      position: relative;
+      padding: 1rem 0 4rem;
+    }
+  
+    h4{
+      font-size: .8rem;
+    }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      background-color: var(--navbar);
+      color:var(--white);
+      height: 8vh;
+    }
+  
+    .burger {
+      position: absolute; /*keeps hamburger menu locked on right side of screen*/
+      right: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 1.7rem;
+      height: 1.4rem;
+      margin:auto;
+      cursor: pointer;
+    }
+  
+    .burger .bar{
+      height: .1rem;
+      width: 100%;
+      background-color: var(--logored);
+      border-radius: 1rem; 
+    }
+  
+    #bar2{
+      width: 74%;
+      align-self: flex-end;
+    }
+  
+    .video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: -999;
+      width: 100%;
+    }
+  
+    .homevid {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      height: auto;
+      left: none;
+      right: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .logo-wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%;
+    }
+  
+    .logo{
+      margin: auto;
+      font-size: var(--textfont);
+      margin-left: 0;
+      padding: 1rem;
+    }
+  
+    .navlinks{
+      display: flex;
+      position: relative;
+      width: auto;
+      right: 0;
+      margin-left: auto;
+    }
+    
+    .navlinks-menu.active{
+      transform: translateX(0%);
+    }
+  
+    .navlinks ul {
+      position: absolute;
+      right: 0;
+      height: 92vh;
+      top: 4vh;
+      width:100vw;
+      display: flex;
+      flex-direction: column;
+      background: var(--main-bg-color);
+      transform: translateX(100%);
+      transition: transform 750ms ease-in-out;
+    }
+   
+    .navlinks ul li{
+      width: 100%;
+      margin: 2rem 0;
+    }
+  
+    .navlinks ul li a {
+      color: black;
+      padding: .5rem 1rem;
+      width: auto;
+      height: 95%;
+      align-items: center;
+      font-weight: 300;
+      font-size: var(--smallfont);
+    }
+  
+    ul .book-button{
+      display: none;
+    }
+  
+    .columns{
+      grid-auto-flow: row;
+    }
+
+}

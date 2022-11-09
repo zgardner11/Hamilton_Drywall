@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <link rel="stylesheet" href="Styles/styles.css">
+        <script src="JS/main.js" defer></script>
+    </head>
+    <body>
+        <nav id="navbar">
+           
+            <div class = "burger">
+                <span class = "bar"></span>
+                <span class = "bar" id = "bar2"></span>
+                <span class = "bar"></span>
+            </div>
+            <section class = "navlinks"> 
+                <ul class = "navlinks-menu">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" id = "contact-nav">Contact</a></li>
+                    <a href = "book.html" class = "book-button">Check Availability</a>
+                </ul>
+            </section>
+            <div class = "logo-wrapper">
+                <a href="index.html" class = "logo">Hamilton Drywall Products</a>
+            </div>
+        </nav>
+        <section class = "contact-main">
+            <header>
+                <h3>Let's get in touch.</h3>
+                <h4>Please fill out the form below and I will respond to your inquiry within 24 hours. Thank you!</h4>
+            </header>
+            <div id="contact-wrapper">
+            <form action = "contactform.php" method= "POST" id = "contact-form">
+                <p>
+                    <label for = "name">Name*</label>
+                    <input type = "text" class = "contact-name" name = "name" required>
+                </p>
+                <p>
+                    <label for = "email">Email*</label>
+                    <input type = "email" class = "contact-input" name = "email" required>
+                </p>
+                <p>
+                    <label for = "service">Which product are you looking to know more about?</label> 
+                    <input type = "text" name = "service" required>
+                </p>
+                <p>
+                    <label for = "message">How can we be of service today?</label>
+                    <label for = "message">Anything in particular that you would like to know about the place?</label>
+                    <textarea name = "message" rows = "4" type = "textarea"></textarea>
+                    <div id="contactbutton">
+                        <button>
+                            <a class = "book-button" name = "submit">Contact</a>
+                        </button>
+                    </div>
+                </p>
+            </form>
+        </section>
+        </div>
+    </body>
+</html> 
