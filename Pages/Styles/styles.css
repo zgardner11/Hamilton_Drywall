@@ -17,8 +17,8 @@
   --silverblue:#3e6586;
   --lightgradient: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.4)
+    rgba(255, 255, 255, 0.804),
+    rgba(255, 255, 255, 0.409)
   );
   --headerfont: 2.2rem;
   --largefont: 2rem;
@@ -47,11 +47,6 @@ body {
 
 ul {
   list-style-type: none; /* takes bullet points out */
-}
-
-h1{
-  text-align: center;
-  font-size: 2.5rem;
 }
 
 h2, h3{
@@ -249,7 +244,7 @@ nav .book-button{
 /* main */
 
 #main-wrap{
-  background-color: #160035;
+  background-color: aliceblue;
   height: 100vh;
 }
 
@@ -258,7 +253,7 @@ nav .book-button{
   justify-content: center;
   align-items: center;
   gap: 4em;
-  color: aliceblue;
+  color: black;
   height: 100vh;
   position: relative;
   top: 5rem;
@@ -267,13 +262,89 @@ nav .book-button{
   height: fit-content;
 }
 
+#main-header h1{
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
+  /* offset x ~ offset y ~ blur radius */
+  padding: 2rem;
+  border-radius: .2em;
+}
+
 .main-header-shape{
+  display: flex;
   width: 30em;
   background-color: var(--logored);
   color: aliceblue;
-  padding: 3rem 2rem;
-  border-radius: .7em;
+	height: 0;
 }
+
+.main-header-shape h2{
+  width:fit-content;
+  height: fit-content;
+  text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
+  position: relative;
+}
+
+.shape1{
+  border-radius: .4em 0 .2em .2em;
+  border: 1px solid aliceblue;
+  /* single sided trapezoid using border */
+  border-color: var(--logored) aliceblue transparent transparent;
+  border-width: 8rem 7rem 0 0; 
+}
+
+.shape1 h2{
+  position: relative;
+  /* border: black solid 2px; */
+  bottom: 7.5rem;
+}
+
+.shape2{
+  border-radius: 0 .7em .2em 0;
+  border: 1px solid aliceblue;
+  border-color: var(--logored) transparent transparent aliceblue;
+  border-width: 0 0 8rem 7rem;
+  /* top ~ right ~ bottom ~ left */
+}
+
+.shape2 h2{
+  /* width: 50%; */
+  text-align: start;
+  /* padding-top: 1.5rem; */
+  margin: auto;
+  border: black solid 2px;
+}
+
+.main-select-wrapper{
+  width: 70%;
+  margin: auto;
+  margin-top: 7em;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 4em;
+  border: var(--logored) solid 1px;
+  border-radius: .2em;
+  background: var(--lightgradient);
+}
+
+.main-select{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16em;
+  height: 11em;
+  border-radius: .2em .7em;
+  background: linear-gradient(to bottom, rgba(224, 224, 224, 0), var(--navbar));
+}
+
+.main-select h3{
+  font-weight: 200;
+  font-style: italic;
+}
+
 /* finishing products */
 
 .flip-card {
