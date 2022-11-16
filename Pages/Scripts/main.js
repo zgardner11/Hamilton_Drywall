@@ -100,3 +100,18 @@ function dateFilled(dateStart, dateEnd) {
   dateEnd.className = 'date-book success';  
   console.log('working');
 }
+
+// horizontal scrolling
+
+const scrollContainer = document.getElementById("products");
+
+// using deltaY property of scrollContainer object to convert amount traveled in Y direction to same amount traveled, but in the X direction
+// positive = user scrolling up
+
+scrollContainer.addEventListener("wheel", (normalScroll) => {
+  normalScroll.preventDefault();
+
+  scrollContainer.scrollBy({
+    left: normalScroll.deltaY < 0 ? -30 : 30,
+  })
+});

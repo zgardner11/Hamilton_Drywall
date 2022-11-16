@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Thasadith:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* rokkit */
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800&display=swap');
 
 :root{
   --main-bg-color: linear-gradient( to bottom, var(--navbar), var(--silverblue));
@@ -38,11 +36,9 @@ html{
 }
 
 body {
-  font-family: 'EB Garamond', serif; 
+  font-family: 'Rokkitt', serif;
   font-weight: 100;
   line-height: 1.5;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 ul {
@@ -55,7 +51,6 @@ h2, h3{
 }
 
 h4{
-  font-family: 'EB Garamond', serif;
   font-size: var(--textfont);
   text-align: center;
   font-weight: 200;
@@ -76,24 +71,19 @@ img {
 
 a {
   text-decoration: none; /* takes underline out*/
-  font-weight: 100;
 }
 
 a:visited{
-  color: aliceblue;
+  color: black;
 }
 
-a:active{   /* emulates pressing of button in 3d space */
+a:active{  
+  /* emulates pressing of button in 3d space */
   top: 1px;
 }
 
-form{
-  font-family: 'Outfit', sans-serif;
-}
-
-main{
-  /* background-color: var(--navbar); */
-  height: 100vh;
+.page-background{
+  background-color: var(--navbar);
 }
 
 /* navigation */
@@ -112,29 +102,14 @@ main{
   z-index: 1111;
 }
 
-.logo {
-  font-family: 'Outfit', sans-serif;
-  position: relative;
-  margin-left: 2rem;
-  color: var(--white);
-  font-size: var(--smallfont);
-  padding: 1.5rem;
-  font-weight: 100;
-  transition: color 500ms ease-out;
-}
-
-.logo:hover{
-  color: var(--wine);
-}
-
-#nav-logo{
+#logo{
     width: 13em;
     position: relative;
     top: 4.5vh;
 }
 
 .navlinks{
-  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
   display: flex;
   position: relative;
   width: 100%;
@@ -158,8 +133,6 @@ main{
   color: black;
   padding: 1rem;
   height: 80%;
-  /* margin-right: 2rem; */
-  font-weight: 200;
   position: relative;
   justify-content: center;
   font-size: var(--textfont);
@@ -169,7 +142,7 @@ main{
   color:var(--logored);
 }
 
-.navlinks li a:after {
+.navlinks li a:after{
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -180,10 +153,9 @@ main{
   color: transparent;
   background: var(--logored);
   height: 2px;
-
 }
 
-.navlinks ul li>a:hover:after {
+.navlinks ul li>a:hover:after{
   width: 50%;
 }
 
@@ -191,40 +163,6 @@ nav a,
 nav a:after,
 nav a:before {
   transition: all .4s;
-}
-
-.book-button{
-  background-color: var(--silverblue);
-  color:aliceblue;
-  padding: 1.5rem 2rem;
-  height: 80%;
-  width: fit-content;
-  font-size: 1rem;
-  font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-overflow: none;
-  border-radius: .8rem;
-  border: var(--skyblue) .5px solid;
-  transition: border-radius 750ms ease-out, background-color 500ms ease-out;
-}
-
-.book-button:hover{
-  background-color: rgb(214, 75, 0);
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.book-button.active{
-  background-color: rgb(214, 75, 0);
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-nav .book-button{
-  margin: auto 5rem auto 4rem;
 }
 
 .contact-nav{
@@ -241,34 +179,52 @@ nav .book-button{
     cursor: pointer;
 }
 
-/* main */
-
-#main-wrap{
-  background-color: aliceblue;
-  height: 100vh;
+#logo-nav-outer{
+  display: none ;
 }
 
-#main-header{
+/* main */
+
+.main-wrap{
+  background-color: aliceblue;
+  height: fit-content;
+  padding-bottom: 4rem;
+}
+
+#main-header-outer{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4em;
   color: black;
-  height: 100vh;
   position: relative;
-  top: 5rem;
-  padding: 2rem;
-  border: aliceblue solid 4px;
+  top: 4rem;
+  padding: 1em;
   height: fit-content;
 }
 
-#main-header h1{
+#main-header-outer h1{
   text-align: center;
-  font-size: 2.5rem;
+  font-size: var(--headerfont);
   text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
   /* offset x ~ offset y ~ blur radius */
-  padding: 2rem;
-  border-radius: .2em;
+  padding: 1rem;
+  transition: all 1.8s;
+}
+
+
+
+h1:after{
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 16%;
+  content: '.';
+  color: transparent;
+  background: var(--logored);
+  height: 2px;
 }
 
 .main-header-shape{
@@ -277,13 +233,32 @@ nav .book-button{
   background-color: var(--logored);
   color: aliceblue;
 	height: 0;
+  font-size: .8em;
 }
 
 .main-header-shape h2{
   width:fit-content;
   height: fit-content;
   text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
+  transition: transform 300ms ease-in-out;
+}
+
+.main-header-shape h2:hover, #flag img:hover{
+  transform: scale(1.03);
+}
+
+#flag{
   position: relative;
+  padding-top: 6%;
+  left: 64%;
+  /* padding: 1em; */
+  /* right:0; */
+  width: 8em;
+}
+
+#flag img{
+  transition: transform 300ms ease-in-out;
+  box-shadow: -2px 4px 7px rgba(0, 0, 0, 0.42);
 }
 
 .shape1{
@@ -291,29 +266,38 @@ nav .book-button{
   border: 1px solid aliceblue;
   /* single sided trapezoid using border */
   border-color: var(--logored) aliceblue transparent transparent;
-  border-width: 8rem 7rem 0 0; 
+  border-width: 7em 5em 0 2em; 
 }
 
 .shape1 h2{
-  position: relative;
-  /* border: black solid 2px; */
-  bottom: 7.5rem;
+  position: absolute;
+  width: 30%;
+  bottom: 25%;
+  max-width: 16em;
+  text-align: start;
+  padding-left: 1rem;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .shape2{
   border-radius: 0 .7em .2em 0;
   border: 1px solid aliceblue;
   border-color: var(--logored) transparent transparent aliceblue;
-  border-width: 0 0 8rem 7rem;
+  border-width: 0 0 7em 5em;
   /* top ~ right ~ bottom ~ left */
 }
 
 .shape2 h2{
-  /* width: 50%; */
+  position: absolute;
+  bottom: 25%;
+  width: 11vw;
   text-align: start;
-  /* padding-top: 1.5rem; */
-  margin: auto;
-  border: black solid 2px;
+  padding-left: 1rem;
+  font-weight: 400;
+  /* border: black solid 2px; */
+  width: 12%;
+  max-width: 11em;
 }
 
 .main-select-wrapper{
@@ -325,9 +309,9 @@ nav .book-button{
   justify-content: center;
   flex: 1;
   gap: 4em;
-  border: var(--logored) solid 1px;
-  border-radius: .2em;
-  background: var(--lightgradient);
+  border-radius: .2em .7em;
+  /* background: var(--lightgradient); */
+  /* border: rgb(211, 211, 211) solid 1px;` */
 }
 
 .main-select{
@@ -337,28 +321,84 @@ nav .book-button{
   width: 16em;
   height: 11em;
   border-radius: .2em .7em;
-  background: linear-gradient(to bottom, rgba(224, 224, 224, 0), var(--navbar));
+  background: linear-gradient(to bottom, rgba(224, 224, 224, .7), var(--navbar));
+  text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
+  box-shadow: 0 7px 11px rgba(0, 0, 0, 0.244);
+  transition: transform 250ms ease-in-out, background-color 300ms ease-in-out;
+}
+
+.main-select:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+  background-color: var(--logored);
 }
 
 .main-select h3{
-  font-weight: 200;
+  font-weight: 400;
   font-style: italic;
+}
+
+#main-product-img{
+  width: 70%;
+  margin:auto;
 }
 
 /* finishing products */
 
-.flip-card {
-  background-color: transparent;
-  width: 20em;
-  height: 15em;
+#products-main{
+  padding-top: 7rem;
+  height: fit-content;
+  background-color: var(--navbar);
+}
+
+.product-header{
+  background: white;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: 1.5rem 4rem;
+  border-radius: .7em .2em .4em .2em;
+  transition: background-color 250ms ease-in-out, color 300ms ease-out;
+}
+
+.product-header:hover{
+  background-color: var(--logored);
+  color: white;
+}
+
+#products{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 24%; /* size of column/element */
+  justify-items: center;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 7em;
+  background-color: rgb(249, 248, 248);
+  border-radius: .2em;
+  height: fit-content;
+  width: 90%;
+  margin: 4rem auto 0;
+  padding: 4rem;
+}
+
+.product-card{
+  flex: 0 0 auto;
+  width: 22em;
+  height: 22em;
   border: 1px solid #f1f1f1;
-  border-radius: 1em;
-  padding: 1rem;
+  border-radius: .7em;
+  padding: 1em;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
+.product-card:nth-child(even){
+  background: var(--logored);
+}
+
 /* This container is needed to position the front and back side */
-.flip-card-inner {
+
+.product-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -368,12 +408,14 @@ nav .book-button{
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+
+.product-card:hover .product-card-inner {
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+
+.product-card-front, .product-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -381,17 +423,47 @@ nav .book-button{
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
+.product-card-front img{
+  border-radius: 4px 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Style the back side */
-.flip-card-back {
+
+.product-card-back {
+  border-radius: 0 4px;
   background: white;
   color: black;
   transform: rotateY(180deg);
+}
+
+.finishing-products{
+  padding: 1rem;
+}
+
+.finishing-products ul{
+  background: linear-gradient(to top, rgba(240, 240, 240, 0.657), rgba(207, 207, 207, 0));
+  border: gainsboro solid 1px;
+  width: 95%;
+  height: fit-content;
+  margin: 1em auto 0;
+  list-style-type: circle;
+  padding: 0 1em;
+  border-radius: 4px;
+  text-align: start;
+}
+
+.finishing-products ul li{
+  width: 95%;
+  font-weight: 700;
+  margin: 1em auto;
+}
+
+/* accessories */
+
+.accessories-main{
+  height: fit-content;
 }
 
 /* contact page */
@@ -491,13 +563,10 @@ nav .book-button{
   }
   
   #contactbutton.bookpage{
-    /* border: red solid 3px; */
     margin: 3rem auto 2rem;
   }
   
   #bookdisclaimer{
-    /* padding-top: 1rem; */
-    /* border: black solid 3px; */
     font-size: 14px;
   }
 
@@ -507,33 +576,35 @@ nav .book-button{
     background-color: var(--logored);
     color: aliceblue;
     text-align: center;
+    font-weight: 200;
   }
 
   footer ul{
     display: flex;
     justify-content: center;
-    gap: 4em;
+    gap: 3em;
     margin: 0 auto;
     padding: 2em;
-    width: 50%;
+    width: 40%;
     border-top: solid 1px black;
     border-bottom: solid 1px black;
   }
 
   .footer-item{
+    font-weight: 400;
     padding: 1em;
-  
     width: 50%;
     margin: auto;
   }
 
-@media only screen and (max-width: 1070px) {
-  
+  @media only screen 
+      and (min-device-width: 375px) 
+      and (max-device-width: 812px) 
+      and (-webkit-min-device-pixel-ratio: 3) { 
+
     html{
-      /* overflow-y: hidden; */
       overflow-x: hidden;
     }
-  
     header > h2{
       transition: 1000ms font-size;
       font-size: 2rem;
@@ -614,11 +685,22 @@ nav .book-button{
       width: 100%;
     }
   
-    .logo{
-      margin: auto;
-      font-size: var(--textfont);
-      margin-left: 0;
-      padding: 1rem;
+    #logo{
+      display: none;
+    }
+
+    #logo-nav-outer{
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #logo-nav{
+      width: 7em;
+      margin: .5em auto 0;
+      padding: .5em;
+      position: relative;
     }
   
     .navlinks{
@@ -657,16 +739,79 @@ nav .book-button{
       width: auto;
       height: 95%;
       align-items: center;
-      font-weight: 300;
       font-size: var(--smallfont);
     }
   
     ul .book-button{
       display: none;
     }
+
+    /* main */
+
+    .main-select-wrapper{
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .main-wrap{
+      padding-bottom: 0;
+    }
+
+    #main-header-outer{
+      flex-direction: column;
+      top: 2rem;
+    }
+
+    #main-header{
+      order: -1;
+    }
+
+    .main-header-shape{
+      width: 75%;
+    }
+
+    .shape1 h2{
+      width: 70%;
+      bottom: 0;
+      top: 0;
+      left: 5.5vh;
+      margin: auto;
+    }
+
+    .shape2 h2{
+      width: 70%;
+      bottom: 7%;
+    }
+
+    #flag{
+      position: relative;
+      padding-top: 12%;
+      left: 65%;
+      right: 0;
+      width: 4em;
+    }
+
+    /* finishing products */
+
+    #products-main{
+      padding-top: 2rem;
+    }
+
+    #products{
+      gap: 22em;
+      padding: 4rem 11em;
+    }
+
+    .product-header{
+      width: 80%;
+    }
   
     .columns{
       grid-auto-flow: row;
+    }
+
+    .product-header h2{
+      background: white;
     }
 
 }
