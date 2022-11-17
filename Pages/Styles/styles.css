@@ -7,16 +7,15 @@
   --purple: #160035;
   --logored:#8A001f;
   --navbar:#C3DDEC;
-  --darkgreen: #001e04;
-  --green:rgba(0, 70, 0, 0.513);
+  --green: linear-gradient(to bottom, #004e19,rgba(0, 0, 0, 0.654));
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue:#3e6586;
+  --silverblue: linear-gradient(to bottom, #244458, rgba(0, 0, 0, 0.654));
   --lightgradient: linear-gradient(
-    to bottom,
+    to top,
     rgba(255, 255, 255, 0.804),
-    rgba(255, 255, 255, 0.409)
+    rgba(0, 0, 0, 0.409)
   );
   --headerfont: 2.2rem;
   --largefont: 2rem;
@@ -39,6 +38,10 @@ body {
   font-family: 'Rokkitt', serif;
   font-weight: 100;
   line-height: 1.5;
+}
+
+main{
+  border-top: var(--silverblue) solid 2px;
 }
 
 ul {
@@ -96,7 +99,7 @@ a:active{
   align-items: center;
   background-color: var(--navbar);
   color:hsla(192, 10%, 90%, 0.979);
-  height: 8vh;
+  height: 4rem;
   margin-right: auto;
   top: 0;
   z-index: 1111;
@@ -128,7 +131,7 @@ a:active{
   flex: 1;
 }
 
-.navlinks li a {
+.navlinks li a{
   display: flex;
   color: black;
   padding: 1rem;
@@ -171,7 +174,7 @@ nav a:before {
 
 #nav-search{
     display: flex;
-    width: 2.2em;
+    width: 1.8em;
     margin: auto;
 }
 
@@ -180,7 +183,7 @@ nav a:before {
 }
 
 #logo-nav-outer{
-  display: none ;
+  display: none;
 }
 
 /* main */
@@ -211,8 +214,6 @@ nav a:before {
   padding: 1rem;
   transition: all 1.8s;
 }
-
-
 
 h1:after{
   position: absolute;
@@ -291,13 +292,13 @@ h1:after{
 .shape2 h2{
   position: absolute;
   bottom: 25%;
-  width: 11vw;
+  width: 14%;
+  max-width: 11em;
   text-align: start;
   padding-left: 1rem;
   font-weight: 400;
   /* border: black solid 2px; */
-  width: 12%;
-  max-width: 11em;
+ 
 }
 
 .main-select-wrapper{
@@ -310,8 +311,6 @@ h1:after{
   flex: 1;
   gap: 4em;
   border-radius: .2em .7em;
-  /* background: var(--lightgradient); */
-  /* border: rgb(211, 211, 211) solid 1px;` */
 }
 
 .main-select{
@@ -388,15 +387,26 @@ h1:after{
   height: 22em;
   border: 1px solid #f1f1f1;
   border-radius: .7em;
-  padding: 1em;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  padding: .5em;
+  perspective: 1000px; 
+  background: var(--lightgradient);
 }
 
-.product-card:nth-child(even){
-  background: var(--logored);
+.blue{
+  background: var(--silverblue);
 }
 
-/* This container is needed to position the front and back side */
+.green{
+  background: var(--green);
+}
+
+.red{
+  background: linear-gradient(to bottom, var(--logored), rgba(122, 122, 122, 0.311));
+}
+
+.black{
+  background: linear-gradient(to bottom, black, rgba(122, 122, 122, 0.311));
+}
 
 .product-card-inner {
   position: relative;
@@ -407,32 +417,26 @@ h1:after{
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-
 .product-card:hover .product-card-inner {
   transform: rotateY(180deg);
 }
-
-/* Position the front and back side */
 
 .product-card-front, .product-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden; 
   backface-visibility: hidden;
 }
 
 .product-card-front img{
-  border-radius: 4px 0;
+  border-radius: 2px;
   width: 100%;
   height: 100%;
 }
 
-/* Style the back side */
-
 .product-card-back {
-  border-radius: 0 4px;
+  border-radius: 2px;
   background: white;
   color: black;
   transform: rotateY(180deg);
