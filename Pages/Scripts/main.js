@@ -8,6 +8,15 @@ burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 })
 
+// dropdown navigation menu
+
+document.addEventListener( 'click', e => {
+  const navLink = querySelector("contact-nav");
+  const navLinkMenu = querySelector("dropdown-nav");
+
+  
+})
+
 //availability booking
 
 const formBook = document.getElementById('form-book');

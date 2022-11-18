@@ -11,7 +11,13 @@
   --white:hsla(192, 10%, 90%, 0.979);
   --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue: linear-gradient(to bottom, #244458, rgba(0, 0, 0, 0.654));
+  --silverblue: #244458;
+  --bluegradient: linear-gradient(to bottom, #244458, rgba(0, 0, 0, 0.654));
+  --gradient: linear-gradient(
+    to bottom,
+    rgba(243, 243, 243, 0.76),
+    var(--navbar)
+  );
   --lightgradient: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.804),
@@ -106,7 +112,7 @@ a:active{
 }
 
 #logo{
-    width: 13em;
+    width: 11em;
     position: relative;
     top: 4.5vh;
 }
@@ -131,7 +137,7 @@ a:active{
   flex: 1;
 }
 
-.navlinks li a{
+.navlinks-menu > li > a{
   display: flex;
   color: black;
   padding: 1rem;
@@ -141,11 +147,11 @@ a:active{
   font-size: var(--textfont);
 }
 
-.navlinks li a:hover {
+.navlinks-menu > li > a:hover {
   color:var(--logored);
 }
 
-.navlinks li a:after{
+.navlinks-menu > li > a:after{
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -184,6 +190,48 @@ nav a:before {
 
 #logo-nav-outer{
   display: none;
+}
+
+.dropdown-nav{
+  position: absolute;
+  padding: 1em;
+  left: 4em;
+  height: fit-content;
+  margin-top: 1rem;
+  background: var(--gradient);
+  /* opacity: 0; */
+  transition: 500ms opacity ease-in-out;
+}
+
+.contact-nav:focus + .products-nav{
+  opacity: 1;
+}
+
+.dropdown-nav ul{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: var(--silverblue);
+  font-weight: 500;
+  gap: 2em;
+  /* border: black solid 2px; */
+  padding: 1em;
+}
+
+.dropdown-nav ul li{
+  padding-bottom: .2rem;
+  border-bottom: 1px var(--logored) solid;
+  width: fit-content;
+  transition: border-bottom 200ms ease-in;
+}
+
+.dropdown-nav ul li:hover{
+  border-bottom: var(--logored) solid 7px;
+}
+
+.dropdown-nav ul li:last-child{
+  color: var(--logored);
+  font-weight: 700;
+  /* border: black solid 2px; */
 }
 
 /* main */
@@ -345,7 +393,7 @@ h1:after{
 /* finishing products */
 
 #products-main{
-  padding-top: 7rem;
+  padding-top: 5rem;
   height: fit-content;
   background-color: var(--navbar);
 }
@@ -367,22 +415,22 @@ h1:after{
 
 #products{
   display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(30%, 1fr)); */
   grid-auto-flow: column;
-  grid-auto-columns: 24%; /* size of column/element */
+  grid-auto-rows: 30%; /* size of column/element */
   justify-items: center;
   flex-wrap: nowrap;
   overflow-x: scroll;
   gap: 7em;
-  background-color: rgb(249, 248, 248);
+  background: var(--gradient);
   border-radius: .2em;
   height: fit-content;
-  width: 90%;
+  width: 100%;
   margin: 4rem auto 0;
   padding: 4rem;
 }
 
 .product-card{
-  flex: 0 0 auto;
   width: 22em;
   height: 22em;
   border: 1px solid #f1f1f1;
@@ -393,7 +441,7 @@ h1:after{
 }
 
 .blue{
-  background: var(--silverblue);
+  background: var(--bluegradient);
 }
 
 .green{
@@ -590,8 +638,8 @@ h1:after{
     margin: 0 auto;
     padding: 2em;
     width: 40%;
-    border-top: solid 1px black;
-    border-bottom: solid 1px black;
+    border-top: solid 1px var(--silverblue);
+    border-bottom: solid 1px var(--silverblue);
   }
 
   .footer-item{
