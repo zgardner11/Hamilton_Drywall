@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamilton Drywall Products</title>
     <link rel="stylesheet" href="Styles/styles.css">
-    <script src="JS/main.js" defer></script>
+    <script src="Scripts/main.js" defer></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+</script>
+
 </head>
 <body>
     <nav id="navbar">
-   
+
+        <div id="logo-nav-outer">
+            <a href="index.html">
+                <img src="Images/logo.png" alt="hamilton logo" id = "logo-nav">
+            </a>
+        </div>
+
         <div class = "burger">
             <span class = "bar"></span>
             <span class = "bar" id = "bar2"></span>
             <span class = "bar"></span>
         </div>
+
         <section class = "navlinks"> 
             <ul class = "navlinks-menu">
 
@@ -28,12 +39,12 @@
                 </li>
 
                 <li>
-                    <a href="locations.html">Locations</a>
+                    <a href="locations.html" class = "active-nav">Locations</a>
                 </li>
 
                 <div class = "logo-wrapper">
                     <a href="index.html">
-                    <img src="Images/logo.png" alt="hamilton logo" id = "nav-logo">
+                    <img src="Images/logo.png" alt="hamilton logo" id = "logo">
                     </a>
                 </div>
 
@@ -46,24 +57,34 @@
                 </li>
 
                 <li>
-                    <img src = "Images/search.svg" id = "nav-search"></img>    
+                    <img src = "Images/search.svg" id = "nav-search"></img>   
                 </li>
             
             </ul>
         </section>
     </nav>
-
+    <main>
+        <section>
+            
+        </section>
+    </main>
     <footer>
-        <p>Hamilton Drywall Products</p>
-        <p>295 N. Pekin Road, Woodland, Washington 98674</p>
+        <div class = "footer-item">
+            <p>Hamilton Drywall Products</p>
+            <p>295 N. Pekin Road, Woodland, Washington 98674</p>
+        </div>
+   
         <ul class="footer-nav">
             <li>Home</li> 
             <li>About</li> 
             <li>Contact</li> 
             <li>Locations</li>  
         </ul>
-        <p>Phone: (877) 443-7683  |  Fax: (877) 532-9437  </p>
-        <p>info@hamiltondrywallproducts.com</p>
+
+        <div class = "footer-item">
+            <p>Phone: (877) 443-7683  |  Fax: (877) 532-9437</p>
+            <p>info@hamiltondrywallproducts.com</p>
+        </div>
     </footer>
 
 </body>

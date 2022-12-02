@@ -1,5 +1,5 @@
-/* rokkit */
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap');
 
 :root{
   --main-bg-color: linear-gradient( to bottom, var(--navbar), var(--silverblue));
@@ -14,16 +14,21 @@
   --silverblue: #244458;
   --bluegradient: linear-gradient(to bottom, #244458, rgba(0, 0, 0, 0.654));
   --gradient: linear-gradient(
-    to bottom,
+    to top,
     rgba(243, 243, 243, 0.76),
     var(--navbar)
   );
   --lightgradient: linear-gradient(
+    to bottom,
+    rgba(243, 243, 243, 0.7),
+    rgba(255, 255, 255, 0.4)
+  );
+  --darkgradient: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.804),
     rgba(0, 0, 0, 0.409)
   );
-  --headerfont: 2.2rem;
+  --headerfont: 2.4rem;
   --largefont: 2rem;
   --mediumfont:1.5rem;
   --smallfont: 1.25rem;
@@ -41,7 +46,7 @@ html{
 }
 
 body {
-  font-family: 'Rokkitt', serif;
+  font-family: 'Spectral', serif;
   font-weight: 100;
   line-height: 1.5;
 }
@@ -118,15 +123,17 @@ a:active{
 }
 
 .navlinks{
-  font-weight: 200;
+  font-weight: 300;
   display: flex;
   position: relative;
   width: 100%;
   right: 0;
   margin-left: auto;
+  font-family: 'Kanit', sans-serif;
 }
 
 .navlinks ul {
+  position: relative;
   display: flex; /*align navbar items in horizontal row */
   width: 100%;
   flex: 1;
@@ -194,16 +201,18 @@ nav a:before {
 
 .dropdown-nav{
   position: absolute;
-  padding: 1em;
-  left: 4em;
+  padding: 1em 2em;
   height: fit-content;
-  margin-top: 1rem;
-  background: var(--gradient);
-  /* opacity: 0; */
-  transition: 500ms opacity ease-in-out;
+  background: var(--navbar);
+  opacity: 0;
+  visibility: hidden;
+  transition: 500ms all ease-in-out;
+  border-radius: 0 .4em .7em .2em;
 }
 
-.contact-nav:focus + .products-nav{
+.navlinks-menu li:hover .dropdown-nav{
+  display: block;
+  visibility: visible;
   opacity: 1;
 }
 
@@ -211,7 +220,7 @@ nav a:before {
   display: grid;
   grid-template-columns: 50% 50%;
   color: var(--silverblue);
-  font-weight: 500;
+  font-weight: 400;
   gap: 2em;
   /* border: black solid 2px; */
   padding: 1em;
@@ -230,8 +239,13 @@ nav a:before {
 
 .dropdown-nav ul li:last-child{
   color: var(--logored);
-  font-weight: 700;
+  font-weight: 600;
   /* border: black solid 2px; */
+}
+
+.navlinks .active-nav{
+  color: var(--logored);
+  font-weight: 500;
 }
 
 /* main */
@@ -255,12 +269,13 @@ nav a:before {
 }
 
 #main-header-outer h1{
+  font-weight: 700;
   text-align: center;
   font-size: var(--headerfont);
   text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
   /* offset x ~ offset y ~ blur radius */
   padding: 1rem;
-  transition: all 1.8s;
+  transition: all 1.5s ease-in-out;
 }
 
 h1:after{
@@ -277,8 +292,9 @@ h1:after{
 }
 
 .main-header-shape{
+  position: relative;
   display: flex;
-  width: 30em;
+  width: 25em;
   background-color: var(--logored);
   color: aliceblue;
 	height: 0;
@@ -297,12 +313,12 @@ h1:after{
 }
 
 #flag{
-  position: relative;
-  padding-top: 6%;
-  left: 64%;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
   /* padding: 1em; */
   /* right:0; */
-  width: 8em;
+  width: 20%;
 }
 
 #flag img{
@@ -319,10 +335,9 @@ h1:after{
 }
 
 .shape1 h2{
+  line-height: 1.4;
   position: absolute;
-  width: 30%;
-  bottom: 25%;
-  max-width: 16em;
+  bottom: .2rem;
   text-align: start;
   padding-left: 1rem;
   font-style: italic;
@@ -339,18 +354,20 @@ h1:after{
 
 .shape2 h2{
   position: absolute;
-  bottom: 25%;
-  width: 14%;
-  max-width: 11em;
+  top: 1rem;
+  max-width: 12em;
   text-align: start;
   padding-left: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   /* border: black solid 2px; */
  
 }
 
 .main-select-wrapper{
+  display: flex;
+  flex-wrap: wrap;
   width: 70%;
+  height: fit-content;
   margin: auto;
   margin-top: 7em;
   padding: 4rem;
@@ -358,11 +375,15 @@ h1:after{
   justify-content: center;
   flex: 1;
   gap: 4em;
+  background: var(--lightgradient);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.338);  border: rgb(213, 213, 213) solid 2px;
   border-radius: .2em .7em;
 }
 
 .main-select{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 16em;
@@ -370,7 +391,7 @@ h1:after{
   border-radius: .2em .7em;
   background: linear-gradient(to bottom, rgba(224, 224, 224, .7), var(--navbar));
   text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
-  box-shadow: 0 7px 11px rgba(0, 0, 0, 0.244);
+  box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.338);
   transition: transform 250ms ease-in-out, background-color 300ms ease-in-out;
 }
 
@@ -398,19 +419,50 @@ h1:after{
   background-color: var(--navbar);
 }
 
-.product-header{
+.product-header, .accessories-header{
+  position: relative;
   background: white;
   width: fit-content;
   height: fit-content;
   margin: auto;
-  padding: 1.5rem 4rem;
-  border-radius: .7em .2em .4em .2em;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1em 1em .1em .1em;
   transition: background-color 250ms ease-in-out, color 300ms ease-out;
 }
 
-.product-header:hover{
+.product-header:hover,
+.accessories-header:hover{
   background-color: var(--logored);
   color: white;
+}
+
+.product-header::before{
+  content: '';
+  position: absolute;
+  top: 5.3rem;
+  left: -1.4rem;
+  width: 2px;
+  height: 4.2rem;
+  background: var(--logored);
+  transform: rotate(34deg);
+  border-radius: 20px;
+}
+
+.product-header::after{
+  content: '';
+  position: absolute;
+  top: 5.3rem;
+  right: -1.4rem;
+  width: 2px;
+  height: 4.2rem;
+  background: var(--logored);
+  transform: rotate(-34deg);
+  border-radius: 2px;
+}
+
+.product-header h2{
+  margin: auto;
+  text-align: center;
 }
 
 #products{
@@ -422,12 +474,13 @@ h1:after{
   flex-wrap: nowrap;
   overflow-x: scroll;
   gap: 7em;
-  background: var(--gradient);
+  background: var(--lightgradient);
   border-radius: .2em;
   height: fit-content;
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 4rem auto 7rem;
   padding: 4rem;
+  box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.209);
 }
 
 .product-card{
@@ -437,7 +490,7 @@ h1:after{
   border-radius: .7em;
   padding: .5em;
   perspective: 1000px; 
-  background: var(--lightgradient);
+  background: var(--darkgradient);
 }
 
 .blue{
@@ -515,8 +568,94 @@ h1:after{
 /* accessories */
 
 .accessories-main{
-  height: fit-content;
+  padding-top: 5rem;
+  height: 92vh;
+  background: var(--gradient);
 }
+
+.accessories{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 5rem auto;
+}
+
+.accessories article{
+  display: flex;
+  margin: auto;
+  width: 20rem;
+  height: 16rem;
+  border-radius: .2em .7em;
+  border: rgba(171, 171, 171, 0.796) solid 2px;
+  background: var(--lightgradient);
+}
+
+.accessories article a{
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+}
+
+.accessories article:nth-child(1){
+  border: var(--logored) solid 2px;
+}
+
+/* locations */
+
+/* industry links */
+
+#industry{
+  background: var(--gradient);
+  padding-top: 5rem;
+}
+
+#industry-links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: .4em;
+  background:var(--lightgradient);
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
+  border: 1px rgba(255, 255, 255, 0.155) solid;
+}
+
+#industry-links article{
+  border: orange solid 3px;
+  width: 30%;
+  min-width: 15rem;
+  height: 15rem;
+  text-align: center;
+  backdrop-filter: blur(2rem);
+  box-shadow: 0 .7rem 1rem rgba(0, 0, 0, 0.199);
+  border: 3px rgba(255, 255, 255, 0.807) solid;
+  border-radius: .2em;
+}
+
+
+#industry-links article:nth-child(2n+1){
+  border: 3px rgb(118, 118, 118) solid;
+}
+
+#industry-links article a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 
 /* contact page */
 
@@ -649,10 +788,8 @@ h1:after{
     margin: auto;
   }
 
-  @media only screen 
-      and (min-device-width: 375px) 
-      and (max-device-width: 812px) 
-      and (-webkit-min-device-pixel-ratio: 3) { 
+  @media (min-device-width: 375px) 
+      and (max-device-width: 812px) { 
 
     html{
       overflow-x: hidden;
@@ -729,7 +866,7 @@ h1:after{
     }
   
     .logo-wrapper{
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: start;
       flex-wrap: wrap;
@@ -786,6 +923,7 @@ h1:after{
     }
   
     .navlinks ul li a {
+      position: relative;
       color: black;
       padding: .5rem 1rem;
       width: auto;
@@ -793,8 +931,21 @@ h1:after{
       align-items: center;
       font-size: var(--smallfont);
     }
+
+    .navlinks ul li a::after{
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 2px;
+      top: 11vh;
+      color: var(--logored);
+    }
   
     ul .book-button{
+      display: none;
+    }
+
+    .dropdown-nav{
       display: none;
     }
 
@@ -819,20 +970,23 @@ h1:after{
     }
 
     .main-header-shape{
+      position: relative;
       width: 75%;
     }
 
     .shape1 h2{
-      width: 70%;
+      width: auto;
       bottom: 0;
       top: 0;
-      left: 5.5vh;
+      /* left: 5.5vh; */
+      color: black;
       margin: auto;
     }
 
     .shape2 h2{
       width: 70%;
-      bottom: 7%;
+      top: 0;
+      color: black;
     }
 
     #flag{
@@ -844,6 +998,10 @@ h1:after{
     }
 
     /* finishing products */
+
+    .product-header::after, .product-header::before{
+      display: none;
+    }
 
     #products-main{
       padding-top: 2rem;
@@ -864,6 +1022,21 @@ h1:after{
 
     .product-header h2{
       background: white;
+    }
+
+    /* accessories */
+
+    /* locations */
+
+    /* industry links */
+
+    #industry-links{
+      flex-direction: column;
+      width: 90%;
+    }
+
+    #industry-links article{
+      width: 80%;
     }
 
 }
