@@ -612,18 +612,79 @@ h1:after{
 
 #industry{
   background: var(--gradient);
-  padding-top: 5rem;
+  padding-top: 2rem;
+}
+
+#industry header{
+  padding: 4rem;
+  background: var(--gradient);
+  font-size: var(--mediumfont);
+}
+
+#industry header h2{
+  padding-bottom: 2rem;
+  margin: auto;
+  width: 22%;
+  border-bottom: rgba(0, 0, 0, 0.162) solid 2px;
+}
+
+#industry section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; 
+  height: 65vh;
+  border-bottom: rgba(255, 255, 255, 0.676) solid 2px;
+}
+
+#industry section .link{
+  padding: 2rem 7rem;
+  flex-basis: 70%;
+  /* border: orange solid 3px; */
+}
+
+#industry section article{
+  max-height: 100%;
+}
+
+#industry section:nth-child(3n){
+  background-color: var(--logored);
+  color: white;
+}
+
+#industry section:nth-child(3n+1){
+  background-color: rgb(255, 255, 255);
+  color: var(--logored);
+}
+
+#industry section article p{
+  width: 70%;
+  font-size: var(--smallfont);
+  font-weight: 400;
+  padding: 2rem;
+  margin: auto;
+}
+
+#industry section article img{
+  max-height: 24rem;
+  border-radius: 2px;
+  transition: all 250ms ease-in-out;
+}
+
+#industry section article img:hover{
+  transform: scale(1.03);
 }
 
 #industry-links{
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   width: 70%;
   margin: auto;
-  padding: 2rem;
-  gap: 1rem;
+  padding: 7rem;
+  gap: 7rem 2rem;
   border-radius: .4em;
   background:var(--lightgradient);
   backdrop-filter: blur(2rem);
@@ -631,24 +692,23 @@ h1:after{
   border: 1px rgba(255, 255, 255, 0.155) solid;
 }
 
-#industry-links article{
-  border: orange solid 3px;
-  width: 30%;
-  min-width: 15rem;
-  height: 15rem;
+#industry article h3{
+  font-size: var(--mediumfont);
+  font-weight: 500;
+  width: 70%;
+  padding: 2rem;
+  margin: auto;
+}
+
+#industry article:nth-child(odd) h3{
+  text-align: start;
+}
+
+#industry article:nth-child(even) p{
   text-align: center;
-  backdrop-filter: blur(2rem);
-  box-shadow: 0 .7rem 1rem rgba(0, 0, 0, 0.199);
-  border: 3px rgba(255, 255, 255, 0.807) solid;
-  border-radius: .2em;
 }
 
-
-#industry-links article:nth-child(2n+1){
-  border: 3px rgb(118, 118, 118) solid;
-}
-
-#industry-links article a{
+#industry article a{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -656,6 +716,18 @@ h1:after{
   height: 100%;
 }
 
+#industry-links article::before{
+  position: absolute;
+  left: 0;
+  top: -5rem;
+  width: 100%;
+  font-weight: 300;
+  font-size: var(--smallfont);
+}
+
+.italic{
+  font-style: italic;
+}
 
 /* contact page */
 
