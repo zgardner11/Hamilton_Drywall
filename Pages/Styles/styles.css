@@ -80,7 +80,7 @@ html{
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  line-height: 1.5;
+  line-height: 1.62; /* golden ratio */
 }
 
 main{
@@ -93,6 +93,7 @@ ul {
 
 h2, h3{
   text-align: center;
+  font-weight: 500;
 }
 
 h4{
@@ -131,10 +132,11 @@ a:active{
   padding-top: 5rem;
   padding-bottom: 3rem;
   background: var(--navbar);
-  font-size: var(--smallfont);
 }
 
 .page-header h2{
+  font-size: var(--largefont);
+  font-weight: 600;
   padding: 2rem;
   text-align: center;
   margin: auto;
@@ -282,14 +284,14 @@ nav a:before {
 
 .dropdown-nav ul li:last-child{
   color: var(--logored);
-  font-weight: 900;
+  font-weight: 700;
   font-style: italic;
   /* border: black solid 2px; */
 }
 
 .navlinks .active-nav{
   color: var(--logored);
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Main */
@@ -386,7 +388,7 @@ h1::after{
   text-align: start;
   padding-left: 1rem;
   font-style: italic;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .shape2{
@@ -453,7 +455,6 @@ h1::after{
 }
 
 .main-select h3{
-  font-weight: 600;
   font-style: italic;
 }
 
@@ -495,7 +496,6 @@ h1::after{
 .finishing-products article:nth-child(even){
   background: var(--navbar);
   color: black;
-  font-weight: 600;
   position: relative;
   top: 4rem;
   transition: all 350ms ease-in-out;
@@ -534,20 +534,18 @@ h1::after{
   background: var(--diaggradient);
 }
 
-.product-header, 
-.accessories-header{
+.product-header{
   position: relative;
-  background: rgba(255, 255, 255, 0.645);
+  background: aliceblue;
   width: fit-content;
   height: fit-content;
-  margin: 2rem auto;
-  padding: 1rem 2.5rem;
-  border-radius: 1em 1em .1em .1em;
+  margin: 1rem auto;
+  padding: 1rem 3.5rem;
+  border-radius: 7px 7px 0 0;
   transition: background-color 250ms ease-in-out, color 300ms ease-out;
 }
 
-.product-header:hover,
-.accessories-header:hover{
+.product-header:hover{
   background-color: var(--logored);
   color: white;
 }
@@ -555,8 +553,8 @@ h1::after{
 .product-header::before{
   content: '';
   position: absolute;
-  top: 4.3rem;
-  left: -1.4rem;
+  top: 4.5rem;
+  left: -1.5rem;
   width: 3px;
   height: 4rem;
   background: rgba(255, 255, 255, 0.809);
@@ -567,8 +565,8 @@ h1::after{
 .product-header::after{
   content: '';
   position: absolute;
-  top: 4.3rem;
-  right: -1.4rem;
+  top: 4.5rem;
+  right: -1.5rem;
   width: 3px;
   height: 4rem;
   background: rgba(255, 255, 255, 0.809);
@@ -577,6 +575,7 @@ h1::after{
 }
 
 .product-header h2{
+  font-weight: 600;
   margin: auto;
   text-align: center;
 }
@@ -593,7 +592,7 @@ h1::after{
   border-radius: .2em;
   height: fit-content;
   width: 100%;
-  margin: 4rem auto 7rem;
+  margin: 4.5rem auto;
   padding: 4rem;
   box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.209);
 }
@@ -677,11 +676,6 @@ h1::after{
   background: var(--darkblue);
 }
 
-#accessories-header{
-  width: 100%;
-  padding: 5rem;
-}
-
 .accessories article{
   display: flex;
   margin: auto;
@@ -710,7 +704,7 @@ h1::after{
 
 .accessories article:nth-child(2){
   border-radius: 0 0 0 5em;
-  background: var(--logored);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .accessories article:nth-child(2) a{
@@ -721,8 +715,8 @@ h1::after{
 
 #locations{
   background: var(--gradient);
-  padding: .1rem;
   overflow-y: scroll;
+  margin: 0;
 }
 
 #locations h2{
@@ -734,7 +728,7 @@ h1::after{
   width: 85vw;
   height: fit-content;
   box-sizing: border-box;
-  margin: 5rem auto;
+  margin: 0 auto 5rem;
   gap: 2rem;
 }
 
@@ -1235,129 +1229,38 @@ h1::after{
 
 /* contact page */
 
-.contact-main{
-  height: fit-content;
-  position: relative;
-  background: var(--main-bg-color);
-}
-
-.contact-main header{
-  height: fit-content;
-  max-width: 30%;
-  margin: auto;
-  position: relative;
-}
-
-.contact-main h3{
-  text-align: start;
-  margin: 0 0 0 7%;
-  padding-top: 11%;
-  color: aliceblue;
-  font-weight: 100;
-  font-size: var(--mediumfont);
-}
-
-.contact-main h4{
-  margin-left: 50%;
-  padding-top: 10%;
-  color: rgba(198, 195, 189, 0.889);
-  width: 40%;
-  font-size: 16px;
-  text-align: end;
-}
-
-#contact-wrapper{
-  height: fit-content;
-}
-
-#contact-form{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-  grid-auto-rows: fit-content;
-  gap: 2rem;
-  width: 90%;
-  max-width: 35rem;
-  height: fit-content;
-  padding: 7rem;
-  margin: 3vh auto 0;
-  backdrop-filter: blur(2rem);
-  box-shadow: 0 .7rem 2rem rgba(0, 0, 0, 0.199);
-  border: 4px rgba(255, 255, 255, 0.155) solid;
-  border-radius: .8rem;
-  font-weight: 100;
-}
-
-label{
-  color: white;
-  font-size: var(--smallfont);
-  font-weight: 200;
-} 
-
-input, textarea {
-  width: 100%;
-  max-width: 25rem;
-  margin-top: 1rem;
-  padding: .3rem .7rem;
-  outline: 0;
-  border: 3px rgba(255, 255, 255, 0.462) solid;
-  border-radius: .4rem .2rem;
-  background: transparent;
-  font-size: 1rem;
-}
-
-.contact-date{
-  margin: .5rem 0;
-  width: min-content;
-}
-
-form p{
-  width: 100%;
-  position: relative;
-  margin: auto;
-  color:  blue;
-}
-
-button{
-  background: none;
-  border: none;
-}
-
-#contactbutton{
-  display: flex;
-  justify-content: center;
-}
-
-#contactbutton.bookpage{
-  margin: 3rem auto 2rem;
-}
-
-#bookdisclaimer{
-  font-size: 14px;
-}
 /* footer */
 
 footer{
   background-color: var(--logored);
   color: aliceblue;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   padding: 1em;
 }
+
 footer ul{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 3em;
+  gap: 2.5em 4em;
   margin: 0 auto;
   padding: 2em;
   width: 34%;
-  border-top: solid 1px var(--silverblue);
-  border-bottom: solid 1px var(--silverblue);
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
 }
+
+footer ul li:hover{
+transform: scale(1.02);
+}
+
 .footer-item{
-  font-weight: 400;
+  font-weight: 500;
   padding: 2em;
   margin: auto;
 }
+
 .footer-item p{
   line-height: 2;
 }
