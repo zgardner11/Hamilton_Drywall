@@ -7,10 +7,10 @@
 :root{
 
   --logored:#9d0728;
-  --navbar:#a7c3d6;
+  --navbar:#c3ddec;
   --lightblue: #6fa8be;  
   --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue: #527397;
+  --silverblue: #89a2bd;
   --darkblue: #24445d;
   --purple: #160035;
   --green: #295b39;
@@ -1227,9 +1227,93 @@ h1::after{
   font-style: italic;
 }
 
+/* Technical Data */
+
+#tech-data-outer{
+  display:flex;
+  gap: 2rem;
+  background: var(--diaggradient);
+  height: fit-content;
+  padding: 4rem;
+  justify-content: center;
+}
+
+#tech-data-nav{
+  position: sticky;
+  top: 10rem;
+  height: fit-content;
+  width: 22%;
+  border: aliceblue solid 1px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.209);
+}
+
+#tech-data-nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+#tech-data-nav li{
+  margin: auto;
+  text-align: center;
+  width: 14vw;
+  padding: 1rem .5rem;
+  border-radius: 4px;
+  background: var(--darkblue);
+  box-shadow: -4px 2px 7px rgba(0, 0, 0, 0.209);
+  color: aliceblue;
+  transition: all 300ms ease-out;
+}
+
+#tech-data-nav li a{
+  padding: 2rem;
+}
+
+#tech-data-nav li:hover,
+#tech-data-outer .tech-data-list a:hover{
+  transform: scale(1.02);
+  background: var(--logored);
+  color: aliceblue;
+}
+
+.tech-data-list{
+  display: grid;
+  gap: 4rem 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 8rem;
+  background: var(--darkblue);
+  padding: 4rem;
+  border-radius: 4px;
+}
+
+.tech-data-list a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: rgb(120, 145, 164);
+  color: aliceblue;
+  text-align: center;
+  border: aliceblue solid 1px;
+  border-radius: 7px;
+  transition: all 300ms ease-out;
+}
+
+.tech-data-list a:nth-child(3n+1){
+  background: var(--navbar);
+  color: black;
+}
+
+.tech-data-list a:nth-child(3n){
+  background: rgba(32, 32, 32, 0.615);
+  /* color: black; */
+}
+
 /* contact page */
 
-/* footer */
+/* Footer */
 
 footer{
   background-color: var(--logored);
@@ -1591,5 +1675,22 @@ transform: scale(1.02);
 
   #industry section:nth-child(even) article:first-child{
     order: 2; /* rearrange html so paragaph description is first and logo is second for mobile scrolling */
+  }
+
+  /* Technical data */
+
+  #tech-data-outer{
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  #tech-data-nav{
+    position: relative;
+    width: 82%;
+  }
+
+  #tech-data-nav li{
+    width: 90%;
   }
 }
