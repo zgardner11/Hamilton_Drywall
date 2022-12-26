@@ -266,14 +266,14 @@ nav a:before {
   grid-template-columns: 50% 60%;
   color: var(--darkblue);
   font-weight: 600;
-  gap: 2em 1em;
-  padding: 1.5em;
+  gap: 2em;
+  padding: 1.5em 1em;
 }
 
 .dropdown-nav ul li{
   padding-bottom: 1rem;
   border-bottom: 2px solid var(--darkblue);
-  border-radius: 11%;
+  border-radius: 7%;
   width: fit-content;
   transition: border-bottom 200ms ease-in-out;
 }
@@ -286,11 +286,18 @@ nav a:before {
   color: var(--logored);
   font-weight: 700;
   font-style: italic;
+  width: 80%;
+  margin-top: 10%;
+  margin-left: 60%;
   /* border: black solid 2px; */
 }
 
 .dropdown-nav ul li a{
   color: var(--darkblue);
+}
+
+.dropdown-nav ul li:last-child a{
+  color: var(--logored);
 }
 
 .navlinks .active-nav{
