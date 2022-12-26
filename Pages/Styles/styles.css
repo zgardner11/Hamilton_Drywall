@@ -716,6 +716,7 @@ h1::after{
   justify-content: center;
   width: 100%;
   height: 100%;
+  color: var(--logored);
   font-size: var(--smallfont);
   font-weight: 700;
 }
@@ -788,7 +789,7 @@ h1::after{
 
 #locations-panel-list > header {
   padding: 1.4em 1.4em 0 1.4em;
-  color: var(--logored);
+  color: var(--darkblue);
 }
 
 #locations-panel-list .search-input {
@@ -827,7 +828,6 @@ h1::after{
 }
 
 #locations-panel-list .search-input-overlay.search .icon {
-  margin-top: 1em;
   vertical-align: top;
 }
 
@@ -1130,7 +1130,7 @@ h1::after{
   padding-right: 18px;
 }
 
-/* industry links */
+/* Industry Links */
 
 #industry{
   background: var(--gradient);
@@ -1148,7 +1148,6 @@ h1::after{
 
 #industry section article{
   max-height: 100%;
-  /* border: green solid 3px; */
 }
 
 /* target header and paragraph box */
@@ -1162,6 +1161,10 @@ h1::after{
   display: flex;
   justify-content: center;
   flex-basis: 35%; 
+}
+
+#industry section article a{
+  color: var(--darkblue);
 }
 
 #industry section article p{
@@ -1199,7 +1202,7 @@ h1::after{
   right: 0;
   height: 2px;
   background: var(--darkblue);
-  width: 34%;
+  width: 22%;
 }
 
 #industry article:nth-child(even) h3 a::after{ 
@@ -1208,11 +1211,19 @@ h1::after{
 
 #industry section:nth-child(3n){
   background-color: rgb(255, 255, 255);
-  color: var(--logored);
+  color: var(--darkblue);
 }
 
 #industry section:nth-child(3n+1){
   background-color: var(--logored);
+  color: aliceblue;
+}
+
+#industry section:nth-child(3n) a{
+  color: var(--darkblue);
+}
+
+#industry section:nth-child(3n+1) a{
   color: aliceblue;
 }
 
@@ -1222,14 +1233,6 @@ h1::after{
 
 #industry article:nth-child(even) p{
   text-align: center;
-}
-
-#industry > article > a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
 #industry-links article::before{
@@ -1287,6 +1290,7 @@ h1::after{
 
 #tech-data-nav li a{
   padding: 2rem;
+  color: aliceblue;
 }
 
 #tech-data-nav li:hover,
