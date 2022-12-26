@@ -495,11 +495,19 @@ h1::after{
   align-items: center;
   width: 100%;
   height: 100%;
+  color: aliceblue;
+}
+
+.finishing-products-select:nth-child(odd) a{
+  color: aliceblue;
+}
+
+.finishing-products-select:nth-child(even) a{
+  color: black;
 }
 
 .finishing-products article:nth-child(even){
   background: var(--navbar);
-  color: black;
   position: relative;
   top: 4rem;
   transition: all 350ms ease-in-out;
@@ -507,7 +515,6 @@ h1::after{
 
 .finishing-products article:nth-child(even):hover{
   background: var(--logored);
-  color: white;
 }
 
 .finishing-products{
