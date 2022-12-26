@@ -787,14 +787,16 @@ h1::after{
   border-radius: 7px;
 }
 
-#locations-panel-list > header {
-  padding: 1.4em 1.4em 0 1.4em;
+#locations-panel-list > header > h3 {
+  text-align: start;
+  padding: 1em;
   color: var(--darkblue);
 }
 
 #locations-panel-list .search-input {
-  width: 100%;
-  margin-top: 0.8em;
+  width: 90%;
+  margin-top: 0.5em;
+  margin-left: 1em;
   position: relative;
 }
 
@@ -839,9 +841,12 @@ h1::after{
 
 #locations-panel-list .location-result {
   position: relative;
-  padding: 0.8em 3.5em 0.8em 1.4em;
+  padding: 1.5em 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   cursor: pointer;
+  width: 90%;
+  margin: auto;
+  transition: all 300ms ease-out;
 }
 
 #locations-panel-list .location-result:first-of-type {
@@ -854,6 +859,7 @@ h1::after{
 
 #locations-panel-list .location-result.selected {
   outline: 2px solid var(--logored);
+  padding-left: 1em;
   border-radius: 7px;
 }
 
