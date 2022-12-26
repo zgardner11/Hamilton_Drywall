@@ -289,7 +289,7 @@ nav a:before {
   /* border: black solid 2px; */
 }
 
-.dropdwon-nav ul li a{
+.dropdown-nav ul li a{
   color: var(--darkblue);
 }
 
