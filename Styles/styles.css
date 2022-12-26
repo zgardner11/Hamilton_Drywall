@@ -1364,6 +1364,10 @@ footer ul{
   border-bottom: solid 1px black;
 }
 
+footer ul li a{
+  color: aliceblue;
+}
+
 footer ul li:hover{
 transform: scale(1.02);
 }
