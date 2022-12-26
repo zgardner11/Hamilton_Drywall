@@ -111,8 +111,12 @@ img {
   width: 100%; /*keep images inside box container*/
 }
 
-a {
+a{
   text-decoration: none; /* takes underline out*/
+}
+
+a:focus{
+  outline: var(--darkblue);
 }
 
 a:visited{
