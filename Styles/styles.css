@@ -374,7 +374,8 @@ nav a:before {
   background: var(--diaggradient5);
 }
 
-.main-inner:last-child .main-inner-select button a{
+.main-inner:last-child .main-inner-select button a,
+.main-inner:nth-child(5) .main-inner-select button a{
   color: var(--navbar);
   background: var(--darkblue);
 }
