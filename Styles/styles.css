@@ -715,7 +715,7 @@ h1::after{
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  padding: 0;
+  padding-top: 4rem; /* ugly way of adding padding on scroll */
 }
 
 .finishing-product h3{
@@ -724,24 +724,35 @@ h1::after{
 }
 
 #textures{
-  background: var(--diaggradient2);
+  background: var(--darkblue);
 }
 
 #patch{
-  background: var(--diaggradient4);
+  background: var(--silverblue);
 }
 
 .product{
   /* product's individual section */
   display: flex;
+  justify-content: center;
+  align-items: center;
   border-bottom: var(--navbar) solid 2px;
   width: 100%;
+  padding: 4em;
+}
+
+.product-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: orange solid 3px; */
+  /* width: 22%; */
+  margin: auto;
 }
 
 .product-img img{
-  width: 25em;
-  border-radius: 2px;
-  padding: 4rem;
+  width: 16em;
+  margin: auto;
 }
 
 .product-inner{
@@ -1465,6 +1476,12 @@ transform: scale(1.02);
 
   .product{
     flex-direction: column;
+    padding: 0;
+    border: orange solid 3px;
+  }
+
+  .finishing-product{
+    padding: 1em;
   }
 
   #products-nav{
@@ -1472,7 +1489,14 @@ transform: scale(1.02);
   }
 
   .product-inner{
+    flex-direction: column;
     width: 100%;
+    gap: 2rem;
+    margin: 2rem auto;
+  }
+
+  .product-description{
+    /* margin: 2rem auto; */
   }
 
   /* Accessories */
