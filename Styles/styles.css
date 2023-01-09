@@ -455,24 +455,23 @@ nav a:before {
   padding-bottom: 3rem;
 }
 
-.main-inner-select button{
+.main-inner-select a{
   background: none;
   border: none;
   transition: transform 250ms ease-out;
 }
 
-.main-inner-select button a{
+.main-inner-select a{
   background: var(--navbar);
   padding: 1rem;
   color: black;
   font-style: italic;
   font-weight: 500;
   font-size: var(--textfont);
-  border: aliceblue solid 1px;
   border-radius: 4px;
 }
 
-.main-inner-select button:hover{
+.main-inner-select a:hover{
   transform: scale(1.02) translateX(.2rem);
 }
 
@@ -847,6 +846,7 @@ h1::after{
 .product-buttons{
   /* display: flex; */
   width: 60%;
+  max-width: 30em;
   margin: 2rem auto 0;
 }
 
@@ -854,7 +854,6 @@ h1::after{
   display: flex;
   align-items: center;
   width: 100%;
-  height: 2em;
   margin-top: 1em;
   margin-right: auto;
 }
@@ -1475,13 +1474,15 @@ transform: scale(1.02);
   /* Finishing Products */
 
   .product{
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     padding: 0;
     border: orange solid 3px;
   }
 
   .finishing-product{
     padding: 1em;
+    flex-wrap: wrap;
   }
 
   #products-nav{
