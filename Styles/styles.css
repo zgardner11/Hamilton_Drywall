@@ -455,13 +455,7 @@ nav a:before {
   padding-bottom: 3rem;
 }
 
-.main-inner-select a{
-  background: none;
-  border: none;
-  transition: transform 250ms ease-out;
-}
-
-.main-inner-select a{
+.main-inner-select .main-link a{
   background: var(--navbar);
   padding: 1rem;
   color: black;
@@ -469,6 +463,7 @@ nav a:before {
   font-weight: 500;
   font-size: var(--textfont);
   border-radius: 4px;
+  transition: all 100ms ease-in;
 }
 
 .main-inner-select a:hover{
