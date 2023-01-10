@@ -15,24 +15,43 @@ document.addEventListener( 'click', e => {
   const navLinkMenu = querySelector("dropdown-nav");
 })
 
-// horizontal scrolling
+// Product navigation
 
-const scrollContainer = document.getElementById("products");
+let products = document.querySelectorAll(".finishing-product");
 
-// using deltaY property of scrollContainer object to convert amount traveled in Y direction to same amount traveled, but in the X direction
-// positive = user scrolling up
 
-scrollContainer.addEventListener("wheel", (normalScroll) => {
-  normalScroll.preventDefault();
+const observer = new IntersectionObserver (entries => {
+  entries.forEach(entry => {
+    let navProducts = document.querySelectorAll(".product-nav");
 
-  scrollContainer.scrollBy({
-    left: normalScroll.deltaY < 0 ? -30 : 30,
+    if(entry.isIntersecting) {
+
+    //  let classAdd = navProducts.forEach(navProduct => {
+    //     navProduct.classList.add("product-nav-active");
+    //   });
+
+    for (const navProduct of navProducts) {
+      navProduct.classList.add("product-nav-active");
+      // console.log(navProduct.classList)
+    }
+
+      console.log(entry.isIntersecting.findIndex)
+      console.log(entry.target);
+    }
+
+    else {
+      for (const navProduct of navProducts) {
+        navProduct.classList.remove("product-nav-active");
+        // console.log(navProduct.classList)
+      }
+    }
+
   })
+
 });
 
-
-
-
-
+products.forEach(product => {
+  observer.observe(product);
+});
 
 
