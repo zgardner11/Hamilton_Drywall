@@ -95,42 +95,45 @@
             <nav id = "products-nav">
                 <ul>
                     <li>
-                        <a href="#textures" class = "product-nav product-nav-active">Textures</a>
+                        <a href="#textures" class = "product-nav" data-label="textures">Textures</a>
                     </li>
                     
                     <li>
-                        <a href="#patch" class = "product-nav">Patch & Repair</a>
+                        <a href="#patch" class = "product-nav" data-label="patch">Patch & Repair</a>
 
                     </li>
 
                     <li>
-                        <a href="#joints" class = "product-nav">Joint Compounds</a>
+                        <a href="#joints" class = "product-nav" data-label="joints">Joint Compounds</a>
                     </li>
 
                     <li>
-                        <a href="#manuhousing" class = "product-nav">Manufactured Housing</a>
+                        <a href="#manuhousing" class = "product-nav" data-label="manuhousing">Manufactured Housing</a>
                     </li>
 
                     <li>
-                        <a href="#dcs" class = "product-nav">Drywall Completion Systems</a>
+                        <a href="#dcs" class = "product-nav" data-label="dcs">Drywall Completion Systems</a>
                     </li>
 
                     <li>
-                        <a href="#stc" class = "product-nav">Setting Type Compounds</a>
+                        <a href="#stc" class = "product-nav" data-label="stc">Setting Type Compounds</a>
                     </li>
 
                     <li>
-                        <a href="#concrete" class = "product-nav">Concrete Finishing</a>
+                        <a href="#concrete" class = "product-nav" data-label="concrete">Concrete Finishing</a>
                     </li>
 
                     <li>
-                        <a href="#wallboard" class = "product-nav">Wallboard Tape</a>
+                        <a href="#wallboard" class = "product-nav" data-label="wallboard">Wallboard Tape</a>
                     </li>
                 </ul>
             </nav>
 
             <div id="finishing-products">
-                <article class = "finishing-product" id = "textures">
+                <article class = "product-section" id = "textures">
+                    <header>
+                        <h2>Textures</h2>
+                    </header>
                     <div class="product">
                         <div class="product-img">
                             <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
@@ -394,7 +397,10 @@
                     </div>
                 </article>
 
-                <article class = "finishing-product" id = "patch">
+                <article class = "product-section" id = "patch">
+                    <header>
+                        <h2>Patch & Repair</h2>
+                    </header>
                     <div class="product">
                         <div class="product-img">
                             <img src="Images\Patch\bonder.jpg" alt="Texture1">
@@ -658,7 +664,7 @@
                     </div>
                 </article>
 
-                <article class = "finishing-product" id = "joints">
+                <article class = "product-section" id = "joints">
                     <div class="product">
                         <div class="product-img">
                             <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
@@ -922,23 +928,286 @@
                     </div>
                 </article>
 
-                <article class = "finishing-product" id = "manuhousing">
-                    <a href = "manuhousing.html">Manufactured Housing</a>
+                <article class = "product-section" id = "manuhousing">
+                    <header>
+                        <h2>Textures</h2>
+                    </header>
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
+                        </div>
+                        <div class="product-inner">
+                            <div class="product-description">
+                                <header>
+                                    <h3>
+                                        All Purpose
+                                    </h3>
+                                </header>
+                                <ul>
+                                    <li>
+                                        Use for taping, topping and texturing
+                                    </li>
+                                    <li>
+                                        Excellent bond and low shrinkage
+                                    </li>
+                                    <li>
+                                        Excellent for all applications
+                                    </li>
+                                </ul>
+                            </div>
+                             <div class="product-info">
+                                <div class="product-info-inner">
+                                    <div class="product-table">
+
+                                         <div class="product-table-item">
+                                            Product #
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Product # -->
+                                            14125
+                                         </div>
+                                       
+                                         <div class="product-table-item">
+                                            Shipping Weight
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Shipping Weight -->
+                                            52
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Unit
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Unit -->
+                                            BG
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Units/Pallet
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Units/Pallet -->
+                                            54
+                                         </div>
+
+                                    </div>
+                                    <div class="product-buttons">
+                                        <div class="product-button">
+                                            <button>
+                                                <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                       
+                                            
+                                        </div>
+                                        <div class="product-button">
+
+                                            <button>
+                                                <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="Images\Textures\light_weight_new.jpg" alt="Texture1">
+                        </div>
+                        <div class="product-inner">
+                            <div class="product-description">
+                                <header>
+                                    <h3>
+                                        Light Weight
+                                    </h3>
+                                </header>
+                                <ul>
+                                    <li>
+                                        For second and finish coats
+                                    </li>
+                                    <li>
+                                        Low shrinkage
+                                    </li>
+                                    <li>
+                                        Easy sanding
+                                    </li>
+                                </ul>
+                            </div>
+                             <div class="product-info">
+                                <div class="product-info-inner">
+                                    <div class="product-table">
+
+                                         <div class="product-table-item">
+                                            Product #
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Product # -->
+                                            14125
+                                         </div>
+                                       
+                                         <div class="product-table-item">
+                                            Shipping Weight
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Shipping Weight -->
+                                            52
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Unit
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Unit -->
+                                            BG
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Units/Pallet
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Units/Pallet -->
+                                            54
+                                         </div>
+
+                                    </div>
+                                    <div class="product-buttons">
+                                        <div class="product-button">
+                                            <button>
+                                                <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                       
+                                            
+                                        </div>
+                                        <div class="product-button">
+
+                                            <button>
+                                                <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="Images\Textures\mid_weight_new.jpg" alt="Texture1">
+                        </div>
+                        <div class="product-inner">
+                            <div class="product-description">
+                                <header>
+                                    <h3>
+                                        Mid Weight
+                                    </h3>
+                                </header>
+                                <ul>
+                                    <li>
+                                        Suitable for all finishing applications
+                                    </li>
+                                    <li>
+                                        Best for taping and first metal
+                                    </li>
+                                    <li>
+                                        High bond
+                                    </li>
+                                </ul>
+                            </div>
+                             <div class="product-info">
+                                <div class="product-info-inner">
+                                    <div class="product-table">
+
+                                         <div class="product-table-item">
+                                            Product #
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Product # -->
+                                            14125
+                                         </div>
+                                       
+                                         <div class="product-table-item">
+                                            Shipping Weight
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Shipping Weight -->
+                                            52
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Unit
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Unit -->
+                                            BG
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            Units/Pallet
+                                         </div>
+
+                                         <div class="product-table-item">
+                                            <!-- Units/Pallet -->
+                                            54
+                                         </div>
+
+                                    </div>
+                                    <div class="product-buttons">
+                                        <div class="product-button">
+                                            <button>
+                                                <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                       
+                                            
+                                        </div>
+                                        <div class="product-button">
+
+                                            <button>
+                                                <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     
+                    </div>
                 </article>
 
-                <article class = "finishing-product" id = "dcs">
+                <article class = "product-section" id = "dcs">
                     <a href = "dcs.html">Drywall Completion Systems</a>
                 </article>
 
-                <article class = "finishing-product" id = "stc">
+                <article class = "product-section" id = "stc">
                     <a href = "stc.html">Setting Type Compounds</a>
                 </article>
 
-                <article class = "finishing-product" id = "concrete">
+                <article class = "product-section" id = "concrete">
                     <a href = "concrete.html">Concrete Finishing</a>
                 </article>
 
-                <article class = "finishing-product" id = "wallboard">
+                <article class = "product-section" id = "wallboard">
                     <a href = "wallboard.html">Wallboard Tape</a>
                 </article>
 
