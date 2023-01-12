@@ -8,9 +8,8 @@
 
   --logored:#b50027;
   --navbar:#eff9fe;
-  --lightblue: #6fa8be;  
-  --skyblue:hsla(192, 100%, 79%, 0.979);
-  --silverblue: #8daec4;
+  --lightblue: #7fb1d2;  
+  --silverblue: #9ab5c7;
   --darkblue: #24445d;
   --indigo:#2f323c;
   --purple: #160035;
@@ -57,20 +56,20 @@
     var(--green),
     rgba(0, 0, 0, 0.654)
   );
-  --diaggradient: linear-gradient(to right bottom, var(--indigo) 50%,
+  --diaggradient: linear-gradient(to right bottom, var(--indigo) 10%,
   var(--darkblue) 50%
   );
-  --diaggradient2: linear-gradient(to left top, var(--indigo) 15%,
-  var(--darkblue) 15%
+  --diaggradient2: linear-gradient(to top, var(--indigo) 10%,
+  var(--darkblue) 70%
   );
-  --diaggradient3: linear-gradient(to right bottom, var(--indigo) 50%,
-  var(--darkblue) 50%
+  --diaggradient3: linear-gradient(to bottom, var(--indigo) 15%,
+  var(--silverblue) 100%
   );
-  --diaggradient4: linear-gradient(to left bottom, var(--darkblue) 50%,
-  var(--navbar) 50%
+  --diaggradient4: linear-gradient(to top, var(--darkblue) 5%,
+  var(--silverblue) 100%
   );
-  --diaggradient5: linear-gradient(to right bottom, var(--darkblue) 15%,
-  var(--navbar) 15%
+  --diaggradient5: linear-gradient(to left top, var(--darkblue) 0%,
+  var(--silverblue) 50%
   );
   
   --headerfont: 2.2rem;
@@ -94,6 +93,7 @@
 html{
   overflow: auto;
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -370,11 +370,11 @@ nav a:before {
 }
 
 .main-inner:nth-child(4){
-  background: var(--darkblue);
+  background: var(--diaggradient3);
 }
 
 .main-inner:nth-child(5){
-  background: var(--diaggradient4);
+  background: var(--silverblue);
 }
 
 .main-inner:last-child{
@@ -389,7 +389,10 @@ nav a:before {
 }
 
 .main-inner:last-child h3 a,
-.main-inner:last-child p{
+.main-inner:last-child p,
+.main-inner:nth-last-child(2) h3 a,
+.main-inner:nth-last-child(2) p{
+  /* change color of last two paragraphs and headers in main section */
   color: var(--darkblue);
 }
 
@@ -404,14 +407,9 @@ nav a:before {
   flex-direction: column;
 }
 
-
 .main-inner:nth-child(2n+1) .main-inner-select h3 a::after{
   text-align: center;
   margin: auto;
-}
-
-.main-inner section:first-child{
-  background: var(--navbar);
 }
 
 .main-inner img{
@@ -712,31 +710,32 @@ h1::after{
   border-left: aliceblue solid 2px;
 }
 
-.product-section{ /* each product section on nav*/
+.product-section { /* each product section on nav*/
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  padding-top: 4rem; /* ugly way of adding padding on scroll */
+  /* padding-top: 4rem; ugly way of adding padding on scroll */
 }
 
 .product-section > header{
   display: flex;
-  justify-content: center;
+  position: relative;
   align-items: center;
-  /* background: var(--lightgradient); */
-  width: 15%;
-  border-bottom: var(--silverblue) solid 2px;
-  height: 7em;
+  justify-content: center;
+  padding: 4rem;
+  border-bottom: var(--purple) solid 2px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.449);
 }
 
 .product-section > header > h2{
+  /* padding-left: 5rem; */
   font-size: var(--largefont);
   font-weight: 600;
   color: var(--navbar);
-  width: 100%;
 }
 
 .product-section h3{
@@ -747,10 +746,6 @@ h1::after{
 .product-section:nth-child(even) > header{
   color: var(--indigo);
   border-bottom: var(--indigo) 2px solid;
-}
-
-.product-section:nth-child(even) > header > h2{
-  color: var(--indigo);
 }
 
 #textures{
@@ -766,11 +761,7 @@ h1::after{
 }
 
 #manuhousing{
-  background: var(--navbar);
-}
-
-#manuhousing .product-inner{
-  background: var(--diaggradient3);
+  background: var(--indigo);
 }
 
 .product{
@@ -911,6 +902,11 @@ h1::after{
   border-radius: 1em;
   text-align: center;
   color: var(--navbar);
+  transition: transform 150ms ease-out;
+}
+
+.product-button button:hover{
+  transform: scale(1.02) translateX(-2px);
 }
 
 .product-button:first-child button{
@@ -1129,10 +1125,9 @@ h1::after{
 #tech-data-outer{
   display: flex;
   gap: 2rem;
-  background: var(--sidegradient);
+  background: var(--silverblue);
   height: fit-content;
   padding: 4rem;
-  padding-top: 0;
   justify-content: center;
 }
 
@@ -1152,6 +1147,7 @@ h1::after{
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
+  background: var(--lightgradient);
 }
 
 #tech-data-nav li{
@@ -1277,137 +1273,158 @@ and (max-device-width: 1240px) {
   body,html {
     /* hide navigation when off screen */
     overflow-x: hidden;
+    scroll-padding-top: 0;
   }
 
 /*  Navigation  */
 
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  background-color: var(--navbar);
-  color:var(--white);
-  height: 10vh;
-}
-.burger {
-  position: absolute; /*keeps hamburger menu locked on right side of screen*/
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1.7rem;
-  height: 1.4rem;
-  margin: auto;
-  cursor: pointer;
-}
-.burger .bar{
-  height: .1rem;
-  width: 100%;
-  background-color: var(--logored);
-  border-radius: 1rem; 
-}
-#bar2{
-  width: 74%;
-  align-self: flex-end;
-}
-.video {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: -999;
-  width: 100%;
-}
-.homevid {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-  height: auto;
-  left: none;
-  right: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-.logo-wrapper{
-  display: none;
-  align-items: center;
-  justify-content: start;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
-}
-#logo{
-  display: none;
-}
-#logo-nav-outer{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#logo-nav{
-  width: 7em;
-  margin: .5em auto 0;
-  padding: .5em;
-  position: relative;
-}
-.navlinks{
-  display: flex;
-  position: relative;
-  width: auto;
-  right: 0;
-  margin-left: auto;
-}
-
-.navlinks-menu.active{
-  transform: translateX(0%);
-}
-.navlinks ul{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  right: 0;
-  height: 92vh;
-  top: 2em;
-  width: 100vw;
-  background: var(--main-bg-color);
-  transform: translateX(100%);
-  transition: transform 500ms ease-in-out;
-}
-
-.navlinks ul li{
-  width: 100%;
-  margin: 2rem 0;
-}
-.navlinks ul li a {
-  position: relative;
-  color: black;
-  padding: .5rem 1rem;
-  width: auto;
-  height: 95%;
-  align-items: center;
-  font-size: var(--smallfont);
-}
-.navlinks ul li a::after{
-  position: absolute;
-  content: '';
-  width: 50%;
-  height: 2px;
-  top: 11vh;
-  color: var(--logored);
-}
-ul .book-button{
-  display: none;
-}
-.navlinks-menu li:hover .dropdown-nav{
-  display: none;
-}
-.page-header{
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-}
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: var(--navbar);
+    color:var(--white);
+    height: 10vh;
+  }
+  
+  .burger {
+    position: absolute; /*keeps hamburger menu locked on right side of screen*/
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.7rem;
+    height: 1.4rem;
+    margin: auto;
+    cursor: pointer;
+  }
+  
+  .burger .bar{
+    height: .1rem;
+    width: 100%;
+    background-color: var(--logored);
+    border-radius: 1rem; 
+  }
+  
+  #bar2{
+    width: 74%;
+    align-self: flex-end;
+  }
+  
+  .video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -999;
+    width: 100%;
+  }
+  
+  .homevid {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: none;
+    right: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .logo-wrapper{
+    display: none;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #logo{
+    display: none;
+  }
+  
+  #logo-nav-outer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #logo-nav{
+    width: 7em;
+    margin: .5em auto 0;
+    padding: .5em;
+    position: relative;
+  }
+  
+  .navlinks{
+    display: flex;
+    position: relative;
+    width: auto;
+    right: 0;
+    margin-left: auto;
+  }
+  
+  .navlinks-menu.active{
+    transform: translateX(0%);
+  }
+  
+  .navlinks ul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    height: 92vh;
+    top: 2em;
+    width: 100vw;
+    background: var(--main-bg-color);
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+  }
+  
+  .navlinks ul li{
+    width: 100%;
+    margin: 2rem 0;
+  }
+  
+  .navlinks ul li a {
+    position: relative;
+    color: black;
+    padding: .5rem 1rem;
+    width: auto;
+    height: 95%;
+    align-items: center;
+    font-size: var(--smallfont);
+  }
+  
+  .navlinks ul li a::after{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 2px;
+    top: 11vh;
+    color: var(--logored);
+  }
+  
+  ul .book-button{
+    display: none;
+  }
+  
+  .navlinks-menu li:hover .dropdown-nav{
+    display: none;
+  }
+  
+  .page-header{
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  
+  #flag{
+    left: 70%;
+  }
 
   /* Finishing Products */
 
@@ -1424,6 +1441,22 @@ ul .book-button{
     margin: 1rem auto;
     width: 75%;
     top: 0;
+  }
+
+  .product{
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .product-section{
+    flex-wrap: wrap;
+  }
+
+  .product-section > header{
+    justify-content: center;
+  }
+  .product-section > header > h2{
+    padding-left: 0;
   }
 
   .product-inner{
@@ -1448,6 +1481,7 @@ ul .book-button{
     flex-direction: column;
     align-items: center;
     padding: 0;
+    padding-top: 2em;
   }
 
   #tech-data-nav{
@@ -1471,29 +1505,10 @@ ul .book-button{
 
   /* Index */
 
-  #flag{
-    left: 70%;
-  }
 
-  #products-nav{
-    display: none;
-  }
 
   /* Finishing Products */
 
-  #finishing-products{
-    border: none;
-  }
-
-  .product{
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .product-section{
-    padding: 1em;
-    flex-wrap: wrap;
-  }
 
   .product-inner h3{
     /* center product name */
@@ -1598,11 +1613,6 @@ ul .book-button{
   .product{
     flex-wrap: wrap;
     padding: 0;
-  }
-
-  .product-section{
-    padding: 1em;
-    flex-wrap: wrap;
   }
 
   .product-inner{
