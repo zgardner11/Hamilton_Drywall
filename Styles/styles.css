@@ -71,6 +71,12 @@
   --diaggradient5: linear-gradient(to left top, var(--darkblue) 0%,
   var(--silverblue) 50%
   );
+  --diaggradient6: linear-gradient(to left top, var(--darkblue) 0%,
+  var(--silverblue) 50%
+  );
+  --diaggradient7: linear-gradient(to left top, var(--darkblue) 0%,
+  var(--silverblue) 50%
+  );
   
   --headerfont: 2.2rem;
   --largefont: 2rem;
@@ -728,7 +734,8 @@ h1::after{
   padding: 4rem;
   border-bottom: var(--purple) solid 2px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.449);
+  /* background: rgba(0, 0, 0, 0.449); */
+  background: var(--diaggradient4);
 }
 
 .product-section > header > h2{
@@ -928,8 +935,8 @@ h1::after{
 
 .product-button img{
   position: relative;
-  flex-basis: 22%;
-  right: .7rem;
+  flex-basis: 25%;
+  right: .7em;
 }
 
 #products-nav .product-nav.product-nav-active{
