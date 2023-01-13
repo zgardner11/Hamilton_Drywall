@@ -726,7 +726,7 @@ h1::after{
   align-items: center;
   justify-content: center;
   padding: 4rem;
-  border-bottom: var(--purple) solid 2px;
+  border-bottom: var(--grey) solid 2px;
   width: 100%;
   background: rgba(0, 0, 0, 0.449);
 }
@@ -743,9 +743,8 @@ h1::after{
   font-weight: 500;
 }
 
-.product-section:nth-child(even) > header{
+.product-section:nth-child(2n) > header{
   color: var(--indigo);
-  border-bottom: var(--indigo) 2px solid;
 }
 
 #textures{
