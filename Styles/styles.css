@@ -1563,10 +1563,6 @@ and (max-device-width: 1240px) {
     order: 1;
   }
 
-  .main-inner:nth-child(5){
-    background: var(--diaggradient2);
-  }
-
   .main-inner-select{
     width: 40ch;
   }
