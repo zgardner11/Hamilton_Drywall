@@ -10,10 +10,12 @@
   --navbar:#eff9fe;
   --lightblue: #7fb1d2;  
   --silverblue: #9ab5c7;
-  --darkblue: #24445d;
+  --darkblue: #39546d;
   --indigo:#2f323c;
   --purple: #160035;
   --green: #295b39;
+  --grey: rgba(255, 255, 255, 0.393);
+  --darkgrey: rgba(255, 255, 255, 0.625);
   --white:hsla(192, 10%, 90%, 0.979);
 
   --main-bg-color: linear-gradient(
@@ -37,9 +39,9 @@
     var(--navbar)
   );
   --lightgradient: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.393),
-    rgba(255, 255, 255, 0.625)
+    to top,
+    var(--grey),
+    var(--darkgrey)
   );
   --darkgradient: linear-gradient(
     to top,
@@ -70,6 +72,12 @@
   );
   --diaggradient5: linear-gradient(to left top, var(--darkblue) 0%,
   var(--silverblue) 50%
+  );
+  --diaggradient6: linear-gradient(to bottom right, var(--darkblue) 0%,
+  var(--silverblue) 75%
+  );
+  --diaggradient7: linear-gradient(to top left, var(--darkgrey) 0%,
+  var(--silverblue) 100%
   );
   
   --headerfont: 2.2rem;
@@ -726,9 +734,10 @@ h1::after{
   align-items: center;
   justify-content: center;
   padding: 4rem;
-  border-bottom: var(--grey) solid 2px;
+  border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.449);
+  /* background: rgba(0, 0, 0, 0.449); */
+  background: var(--diaggradient4);
 }
 
 .product-section > header > h2{
@@ -743,8 +752,12 @@ h1::after{
   font-weight: 500;
 }
 
-.product-section:nth-child(2n) > header{
-  color: var(--indigo);
+.product-section:nth-child(4n-2) > header{
+  background: var(--diaggradient6);
+}
+
+.product-section:nth-child(4n-1) > header{
+  background: var(--diaggradient7);
 }
 
 #textures{
@@ -927,8 +940,8 @@ h1::after{
 
 .product-button img{
   position: relative;
-  flex-basis: 22%;
-  right: .7rem;
+  flex-basis: 25%;
+  right: .7em;
 }
 
 #products-nav .product-nav.product-nav-active{
@@ -950,11 +963,10 @@ h1::after{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 11rem;
+  gap: 4rem;
   justify-content: center;
   align-items: center;
   width: 100%;
-  /* margin: auto; */
   padding: 7rem 0;
   background: var(--diaggradient);
 }
@@ -1183,7 +1195,7 @@ h1::after{
   grid-auto-rows: 7rem;
   align-items: center;
   justify-content: center;
-  background: var(--darkblue);
+  background: var(--diaggradient6);
   padding: 4rem;
   border-radius: 4px;
   width: 100%;
