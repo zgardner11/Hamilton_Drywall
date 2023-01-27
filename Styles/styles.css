@@ -73,10 +73,16 @@
   --diaggradient5: linear-gradient(to left top, var(--darkblue) 0%,
   var(--silverblue) 50%
   );
-  --diaggradient6: linear-gradient(to bottom right, var(--darkblue) 0%,
+  --productgradient: linear-gradient(to bottom right, var(--darkblue) 0%,
   var(--silverblue) 75%
   );
-  --diaggradient7: linear-gradient(to top left, var(--darkgrey) 0%,
+  --productgradient2: linear-gradient(to top left, var(--darkgrey) 0%,
+  var(--silverblue) 100%
+  );
+  --productgradient3: linear-gradient(to top left, var(--darkgrey) 0%,
+  var(--silverblue) 100%
+  );
+  --productgradient4: linear-gradient(to top left, var(--darkgrey) 0%,
   var(--silverblue) 100%
   );
   
@@ -170,6 +176,8 @@ button{
 }
 
 .page-header h2{
+  display: flex;
+  flex-wrap: wrap;
   font-size: var(--largefont);
   font-weight: 600;
   padding: 2rem;
@@ -730,14 +738,17 @@ h1::after{
 
 .product-section > header{
   display: flex;
+  flex-direction: column;
   position: relative;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
+  gap: 5em;
   /* background: rgba(0, 0, 0, 0.449); */
-  background: var(--diaggradient4);
 }
 
 .product-section > header > h2{
@@ -745,19 +756,32 @@ h1::after{
   font-size: var(--largefont);
   font-weight: 600;
   color: var(--navbar);
+  border-bottom: aliceblue double 4px;
+  padding: .7em;
 }
 
-.product-section h3{
+.product-section > header > h3{
   font-size: var(--mediumfont);
   font-weight: 500;
+  color: var(--darkgrey);
+}
+
+/* background gradient for each product header, just blending each color of section. creativity level 9000 */
+
+.product-section:nth-child(4n-3) > header{
+  background: var(--diaggradient4);
 }
 
 .product-section:nth-child(4n-2) > header{
-  background: var(--diaggradient6);
+  background: var(--productgradient);
 }
 
 .product-section:nth-child(4n-1) > header{
-  background: var(--diaggradient7);
+  background: var(--productgradient2);
+}
+
+.product-section:nth-child(4n) > header{
+  background: var(--productgradient3);
 }
 
 #textures{
@@ -795,8 +819,13 @@ h1::after{
 }
 
 .product-img img{
-  width: 16em;
+  width: 20em;
   margin: 2rem auto;
+  transition: all 250ms ease-in-out;
+}
+
+.product-img img:hover{
+  transform: scale(1.2) translate(20px);
 }
 
 .product-inner{
@@ -931,6 +960,8 @@ h1::after{
 
 .product-button button a{
   display: flex;
+  position: relative;
+  left: .5rem;
   justify-content: center;
   align-items: center;
   color: var(--navbar);
@@ -939,9 +970,10 @@ h1::after{
 }
 
 .product-button img{
+  display: flex;
   position: relative;
-  flex-basis: 25%;
-  right: .7em;
+  width: 2rem;
+  margin-left: auto;
 }
 
 #products-nav .product-nav.product-nav-active{
@@ -951,6 +983,20 @@ h1::after{
 
 #products-nav .product-nav.product-nav-active:hover{
   background: var(--silverblue);
+}
+
+#product-catalog-download{
+  position: relative;
+  margin-left: auto;
+  margin-right: 11%;
+  width: 14rem;
+  padding: 1em 1.5em;
+  background-color: var(--logored);
+  border-radius: 7px;
+}
+
+#product-catalog-download a{
+  color: aliceblue;
 }
 
 /* Accessories */
@@ -1484,7 +1530,18 @@ and (max-device-width: 1240px) {
     padding: 0;
     border: none;
   }
-  
+
+  .product-img img:hover{
+    transform: scale(1.1) translate(0px);
+  }
+
+  .product-button img{
+    scale: .8;
+  }
+
+  #product-catalog-download{
+    display: none;
+  }
 
   /* Technical data */
 
