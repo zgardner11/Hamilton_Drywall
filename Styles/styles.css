@@ -232,7 +232,7 @@ button{
 .navlinks-menu > li > a{
   display: flex;
   color: var(--darkblue);
-  font-weight: 500;
+  font-weight: 700;
   padding: 1rem;
   height: 80%;
   position: relative;
@@ -439,7 +439,8 @@ nav a:before {
 
 .main-inner article:not(.link){
   max-height: 100%;
-  padding: 3rem;
+  padding: 3em;
+  min-width: 20em;
   max-width: 56ch;
   box-shadow: -2px 0 11px rgba(0, 0, 0, 0.3);
 }
@@ -455,7 +456,7 @@ nav a:before {
 }
 
 .main-inner-select p{
-  padding: 4rem 0;
+  padding: 2rem 0;
   font-size: var(--mediumfont);
   color: var(--navbar);
   max-width: 30ch;
@@ -498,6 +499,7 @@ nav a:before {
   text-align: start;
   position: relative;
   transition: all 200ms ease-out;
+  /* border-bottom: var(--silverblue) solid 2px; */
 }
 
 .main-inner-select h3 a::after{
@@ -691,8 +693,9 @@ h1::after{
   position: sticky;
   top: 5em;
   width: 22%;
-  height: 87vh;
+  height: fit-content;
   z-index: 2;
+  overflow-y: scroll;
 }
 
 #products-nav ul{
@@ -702,6 +705,7 @@ h1::after{
   padding: 2rem;
   gap: 1rem;
   height: 100%;
+  overflow-y: scroll;
 }
 
 #products-nav a{
@@ -743,8 +747,7 @@ h1::after{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 15rem;
+  padding: 4rem 0;
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
   gap: 5em;
@@ -883,7 +886,7 @@ h1::after{
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .product-table{
@@ -891,7 +894,7 @@ h1::after{
   position: relative;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 10em);
+  grid-template-columns: repeat(3, 10em);
   /* gap: 1rem 0; */
   width: fit-content;
   background: var(--darkblue);
@@ -899,12 +902,18 @@ h1::after{
   padding: .5em 1em;
   border-radius: 2px;
   margin: auto;
+  text-align: center;
 }
 
-.product-table-item:nth-child(even){
+.product-table-item:nth-child(3n-1){
   padding-left: .5em;
+  border-right: aliceblue solid 1px;
   border-left: aliceblue solid 1px;
   text-align: center;
+}
+
+.product-table-item:nth-last-child(3){
+  border-bottom: none;
 }
 
 .product-table-item:last-child,
@@ -987,8 +996,7 @@ h1::after{
 
 #product-catalog-download{
   position: relative;
-  margin-left: auto;
-  margin-right: 11%;
+  margin: 3rem auto 0;
   width: 14rem;
   padding: 1em 1.5em;
   background-color: var(--logored);
@@ -1505,15 +1513,22 @@ and (max-device-width: 1240px) {
     padding: 0;
   }
 
+  .product-img{
+    flex-direction: column;
+  }
+
   .product-section{
     flex-wrap: wrap;
   }
 
   .product-section > header{
     justify-content: center;
+    padding: 5rem;
   }
+
   .product-section > header > h2{
-    padding-left: 0;
+    padding: 0;
+    padding-bottom: .5em;
   }
 
   .product-inner{

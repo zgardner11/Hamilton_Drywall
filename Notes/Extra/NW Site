@@ -1,0 +1,556 @@
+    <footer>
+        <div class = "footer-item">
+            <p>Hamilton Drywall Products</p>
+            <p>295 N. Pekin Road, Woodland, Washington 98674</p>
+        </div>
+   
+        <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li> 
+            <li><a href="finishing.html">Finishing Products</a></li> 
+            <li><a href="accessories.html">Accessories</a></li> 
+            <li><a href="cornertrims.html">Cornerbeads & Trims</a></li> 
+            <li><a href="industry.html">Industry Links</a></li> 
+            <li><a href="data.html">Technical Data</a></li> 
+            <li><a href="contact.html">Contact</a></li> 
+        </ul>
+
+        <div class = "footer-item">
+            <p>Phone: (877) 443-7683  |  Fax: (877) 532-9437</p>
+            <p>info@hamiltondrywallproducts.com</p>
+        </div>
+    </footer>
+
+    <article class = "product-section" id = "textures">
+        <header>
+            <h2>Textures</h2>
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, ex veritatis?</h3>
+        </header>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Joint_Compounds\all_purpose_jc.png" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            All Purpose
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            Use for taping, topping and texturing
+                        </li>
+                        <li>
+                            Excellent bond and low shrinkage
+                        </li>
+                        <li>
+                            Excellent for all applications
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14125
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                52
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Joint_Compounds\lightweight_jc.png" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            Light Weight
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            For second and finish coats
+                        </li>
+                        <li>
+                            Low shrinkage
+                        </li>
+                        <li>
+                            Easy sanding
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14170
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                57
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Joint_Compounds\midweight_jc.png" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            Mid Weight
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            Suitable for all finishing applications
+                        </li>
+                        <li>
+                            Best for taping and first metal
+                        </li>
+                        <li>
+                            High bond
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14180
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                64
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+    </article>
+
+    <article class = "product-section" id = "patch">
+        <header>
+            <h2>Patch & Repair</h2>
+        </header>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Patch\bonder.jpg" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            All Purpose
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            Suitable for all finishing applications
+                        </li>
+                        <li>
+                            Best for taping and first metal
+                        </li>
+                        <li>
+                            High bond
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14125
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                52
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            All Purpose
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            Suitable for all finishing applications
+                        </li>
+                        <li>
+                            Best for taping and first metal
+                        </li>
+                        <li>
+                            High bond
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14125
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                52
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+        <div class="product">
+            <div class="product-img">
+                <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
+            </div>
+            <div class="product-inner">
+                <div class="product-description">
+                    <header>
+                        <h3>
+                            All Purpose
+                        </h3>
+                    </header>
+                    <ul>
+                        <li>
+                            Suitable for all finishing applications
+                        </li>
+                        <li>
+                            Best for taping and first metal
+                        </li>
+                        <li>
+                            High bond
+                        </li>
+                    </ul>
+                </div>
+                 <div class="product-info">
+                    <div class="product-info-inner">
+                        <div class="product-table">
+
+                             <div class="product-table-item">
+                                Product #
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Product # -->
+                                14125
+                             </div>
+                           
+                             <div class="product-table-item">
+                                Shipping Weight
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Shipping Weight -->
+                                52
+                             </div>
+
+                             <div class="product-table-item">
+                                Unit
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Unit -->
+                                BG
+                             </div>
+
+                             <div class="product-table-item">
+                                Units/Pallet
+                             </div>
+
+                             <div class="product-table-item">
+                                <!-- Units/Pallet -->
+                                54
+                             </div>
+
+                        </div>
+                        <div class="product-buttons">
+                            <div class="product-button">
+                                <button>
+                                    <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                           
+                                
+                            </div>
+                            <div class="product-button">
+
+                                <button>
+                                    <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                    <img src="Images\Icons\download-icon.svg" alt="">
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         
+        </div>
+    </article>
