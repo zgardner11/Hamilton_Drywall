@@ -6,12 +6,13 @@
 
 :root{
 
-  --logored:#b50027;
+  --logored:#c3142b;
   --navbar:#eff9fe;
-  --lightblue: #7fb1d2;  
-  --silverblue: #9ab5c7;
-  --darkblue: #39546d;
-  --indigo:#2f323c;
+  --lightblue: #8aaac0;  
+  --silverblue: #b1c9d9;
+  --darkblue: #2d5577cc;
+  --darkblue2:#04224d;
+  --indigo:#2a2f3f;
   --purple: #160035;
   --green: #295b39;
   --grey: rgba(255, 255, 255, 0.393);
@@ -533,7 +534,7 @@ nav a:before {
 
 #main-header-outer h1{
   position: relative;
-  color: var(--darkblue);
+  color: var(--darkblue2);
   font-weight: 600;
   text-align: center;
   font-size: var(--headerfont);
@@ -695,7 +696,6 @@ h1::after{
   width: 22%;
   height: fit-content;
   z-index: 2;
-  overflow-y: scroll;
 }
 
 #products-nav ul{
@@ -704,8 +704,7 @@ h1::after{
   justify-content: space-evenly;
   padding: 2rem;
   gap: 1rem;
-  height: 100%;
-  overflow-y: scroll;
+  height: fit-content;
 }
 
 #products-nav a{
@@ -714,10 +713,11 @@ h1::after{
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 4em;
-  color: aliceblue;
+  height: calc(70vh/6);
+  color: black;
+  font-weight: 700;
   border-radius: 0 11px 11px 0;
-  background: var(--indigo);
+  background: var(--navbar);
 }
 
 #products-nav a:hover{
@@ -737,7 +737,6 @@ h1::after{
   flex-direction: column;
   width: 100%;
   height: fit-content;
-  /* padding-top: 4rem; ugly way of adding padding on scroll */
 }
 
 .product-section > header{
@@ -751,7 +750,7 @@ h1::after{
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
   gap: 5em;
-  /* background: rgba(0, 0, 0, 0.449); */
+  background: var(--darkblue);
 }
 
 .product-section > header > h2{
@@ -771,21 +770,21 @@ h1::after{
 
 /* background gradient for each product header, just blending each color of section. creativity level 9000 */
 
-.product-section:nth-child(4n-3) > header{
-  background: var(--diaggradient4);
-}
+/* .product-section:nth-child(4n-3) > header{
+  background: var(--darkblue);
+} */
 
-.product-section:nth-child(4n-2) > header{
+/* .product-section:nth-child(4n-2) > header{
   background: var(--productgradient);
-}
+} */
 
-.product-section:nth-child(4n-1) > header{
+/* .product-section:nth-child(4n-1) > header{
   background: var(--productgradient2);
 }
 
 .product-section:nth-child(4n) > header{
   background: var(--productgradient3);
-}
+} */
 
 #textures{
   background: var(--darkblue);
@@ -813,6 +812,14 @@ h1::after{
   padding: 4em 0;
 }
 
+.product:nth-child(even){
+  background: var(--silverblue)
+}
+
+.product:nth-child(odd){
+  background: var(--navbar)
+}
+
 .product-img{
   display: flex;
   justify-content: center;
@@ -822,13 +829,13 @@ h1::after{
 }
 
 .product-img img{
-  width: 20em;
+  max-width: 15rem;
   margin: 2rem auto;
-  transition: all 250ms ease-in-out;
+  transition: all 275ms ease-in-out;
 }
 
 .product-img img:hover{
-  transform: scale(1.2) translate(20px);
+  transform: scale(1.25) translate(7px);
 }
 
 .product-inner{
@@ -836,18 +843,26 @@ h1::after{
   flex: .7;
   height: 20em;
   margin: auto;
-  background: var(--lightgradient);
+  background: var(--navbar);
   border: var(--navbar) solid 2px;
   border-radius: 2px 11px 2px 7px;
 }
 
+.product:nth-child(odd) .product-inner{
+  background: var(--silverblue);
+}
+
+.product:nth-child(even) .product-description{
+  border-right: var(--silverblue) solid 2px;
+}
+
 .product-description{
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   height: 100%;
   flex-basis: 34%;
-  padding: 2rem;
+  padding: 1.5rem;
   color: var(--darkblue);
   border-right: var(--navbar) solid 2px;
 }
@@ -865,7 +880,7 @@ h1::after{
   width: 25ch;
   font-size: var(--textfont);
   font-style: italic;
-  margin: 1.5rem 0;
+  margin: 1.2rem 0;
 }
 
 .product-description ul li:last-child{
@@ -876,7 +891,7 @@ h1::after{
   padding: .7rem;
   padding-left: 0;
   text-align: start;
-  border-bottom: var(--navbar) solid 2px;
+  border-bottom: var(--darkblue) solid 2px;
   width: fit-content;
   font-weight: 600;
 }
@@ -894,6 +909,7 @@ h1::after{
   position: relative;
   display: grid;
   justify-content: center;
+  grid-auto-flow: row;
   grid-template-columns: repeat(3, 10em);
   /* gap: 1rem 0; */
   width: fit-content;
@@ -903,6 +919,8 @@ h1::after{
   border-radius: 2px;
   margin: auto;
   text-align: center;
+  font-size: .7em;
+  
 }
 
 .product-table-item:nth-child(3n-1){
@@ -960,7 +978,7 @@ h1::after{
 }
 
 .product-button:first-child button{
-  background: var(--silverblue);
+  background: var(--indigo);
 }
 
 .product-button:last-child button{
@@ -986,25 +1004,46 @@ h1::after{
 }
 
 #products-nav .product-nav.product-nav-active{
-  background: var(--navbar);
-  color: var(--darkblue);
+  background: var(--logored);
+  color: aliceblue;
 }
 
 #products-nav .product-nav.product-nav-active:hover{
-  background: var(--silverblue);
+  background: var(--logored);
+  color: aliceblue;
 }
 
 #product-catalog-download{
   position: relative;
   margin: 3rem auto 0;
-  width: 14rem;
-  padding: 1em 1.5em;
+  width: 20rem;
   background-color: var(--logored);
   border-radius: 7px;
 }
 
 #product-catalog-download a{
+  border-right: aliceblue solid 2px;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
   color: aliceblue;
+}
+
+/* Cornerbeads */
+
+#products-nav.cornerbeads-nav ul{
+  padding: .5em 2em;
+}
+
+#products-nav.cornerbeads-nav a{
+  height: calc(63vh/13);
+}
+
+#cornerbeads-downloads{
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  gap: 0 2rem;
 }
 
 /* Accessories */
@@ -1114,7 +1153,11 @@ h1::after{
   transition: all 250ms ease-in-out;
 }
 
-#industry section article img:hover,
+#industry section article img:hover
+{
+  transform: scale(1.08);
+}
+
 #industry article h3:hover
 {
   transform: scale(1.02);
@@ -1303,11 +1346,12 @@ footer{
 footer ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2.5em 4em;
   margin: 0 auto;
   padding: 2em;
-  width: 34%;
+  width: 35%;
+  max-width: 38em;
   border-top: solid 1px black;
   border-bottom: solid 1px black;
 }
@@ -1490,11 +1534,13 @@ and (max-device-width: 1240px) {
   #flag{
     left: 70%;
   }
+  
 
   /* Finishing Products */
 
   #finishing-products-main{
     flex-wrap: wrap;
+    gap: 2rem;
   }
 
   #finishing-products{
@@ -1556,6 +1602,16 @@ and (max-device-width: 1240px) {
 
   #product-catalog-download{
     display: none;
+  }
+
+  .product:nth-child(2n) .product-description{
+    border: none;
+  }
+
+  /* Cornerbeads */
+
+  #products-nav.cornerbeads-nav a{
+    height: 4em;
   }
 
   /* Technical data */
@@ -1770,6 +1826,6 @@ and (max-device-width: 1240px) {
   /* Footer */
 
   footer ul{
-    width: 100%;
+    width: 70%;
   }
 }
