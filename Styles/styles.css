@@ -1398,7 +1398,8 @@ and (max-device-width: 1240px) {
   }
   
   .burger {
-    position: absolute; /*keeps hamburger menu locked on right side of screen*/
+    position: fixed; /*keeps hamburger menu locked on right side of screen*/
+    top: 2.5rem;
     right: 1rem;
     display: flex;
     flex-direction: column;
@@ -1407,6 +1408,7 @@ and (max-device-width: 1240px) {
     height: 1.4rem;
     margin: auto;
     cursor: pointer;
+    z-index: 9999;
   }
   
   .burger .bar{
@@ -1482,12 +1484,12 @@ and (max-device-width: 1240px) {
   }
   
   .navlinks ul{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     right: 0;
-    height: 92vh;
-    top: 2em;
+    height: 100vh;
+    top: 0;
     width: 100vw;
     background: var(--main-bg-color);
     transform: translateX(100%);
@@ -1504,7 +1506,7 @@ and (max-device-width: 1240px) {
     color: black;
     padding: .5rem 1rem;
     width: auto;
-    height: 95%;
+    height: 100%;
     align-items: center;
     font-size: var(--smallfont);
   }
@@ -1560,7 +1562,7 @@ and (max-device-width: 1240px) {
   }
 
   .product-img{
-    flex-direction: column;
+    scale: .9;
   }
 
   .product-section{
