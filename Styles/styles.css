@@ -1337,7 +1337,6 @@ h1::after{
 
 footer{
   background-color: var(--logored);
-  color: aliceblue;
   text-align: center;
   font-weight: 300;
   padding: 1em;
@@ -1371,6 +1370,7 @@ transform: scale(1.02);
 }
 
 .footer-item p{
+  color: aliceblue;
   line-height: 2;
 }
 
