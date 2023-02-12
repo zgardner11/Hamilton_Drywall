@@ -1,0 +1,214 @@
+ <article class = "product-section" id = "manuhousing">
+                    <header>
+                        <h2>Manufactured Housing</h2>
+                    </header>
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="Images\Textures\all_purpose_new.jpg" alt="Texture1">
+                        </div>
+                        <div class="product-inner">
+                            <div class="product-description">
+                                <header>
+                                    <h3>
+                                        Ready Spray Texture Multi-Purpose
+                                    </h3>
+                                </header>
+                                <ul>
+                                    <!-- <li>
+                                        Use for taping, topping and texturing
+                                    </li>
+                                    <li>
+                                        Excellent bond and low shrinkage
+                                    </li>
+                                    <li>
+                                        Excellent for all applications
+                                    </li> -->
+                                </ul>
+                            </div>
+                             <div class="product-info">
+                                <div class="product-info-inner">
+                                    <div class="product-table">
+
+                                        <div class="product-table-item">
+                                           Product #
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Product # -->
+                                           14225NC
+                                        </div>
+
+                                        <div class="product-table-item">
+                                            14237NC
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           Unit
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Shipping Weight -->
+                                           Tote
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Unit -->
+                                           Pail
+                                        </div>
+                                      
+                                        <div class="product-table-item">
+                                           Shipping Weight
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           3,650
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Units/Pallet -->
+                                           69
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           Units/Pallet
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           1
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Unit -->
+                                           48
+                                        </div>
+
+                                   </div>
+                                    <div class="product-buttons">
+                                        <div class="product-button">
+                                            <button>
+                                                <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                       
+                                            
+                                        </div>
+                                        <div class="product-button">
+
+                                            <button>
+                                                <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     
+                    </div>
+                    <div class="product">
+                        <div class="product-img">
+                            <img src="Images\Textures\light_weight_new.jpg" alt="Texture1">
+                        </div>
+                        <div class="product-inner">
+                            <div class="product-description">
+                                <header>
+                                    <h3>
+                                        Ready Spray Texture Orange Peel
+                                    </h3>
+                                </header>
+                                <ul>
+                                    <!-- <li>
+                                        For second and finish coats
+                                    </li>
+                                    <li>
+                                        Low shrinkage
+                                    </li>
+                                    <li>
+                                        Easy sanding
+                                    </li> -->
+                                </ul>
+                            </div>
+                             <div class="product-info">
+                                <div class="product-info-inner">
+                                    <div class="product-table">
+
+                                        <div class="product-table-item">
+                                           Product #
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Product # -->
+                                           14227NC
+                                        </div>
+
+                                        <div class="product-table-item">
+                                            14237NC
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           Unit
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Shipping Weight -->
+                                           Tote
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Unit -->
+                                           Pail
+                                        </div>
+                                      
+                                        <div class="product-table-item">
+                                           Shipping Weight
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           3,650
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Units/Pallet -->
+                                           69
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           Units/Pallet
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           1
+                                        </div>
+
+                                        <div class="product-table-item">
+                                           <!-- Unit -->
+                                           48
+                                        </div>
+
+                                   </div>
+                                    <div class="product-buttons">
+                                        <div class="product-button">
+                                            <button>
+                                                <a href="Documents\Submittals\Wall_Textures.pdf">Submittal</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                       
+                                            
+                                        </div>
+                                        <div class="product-button">
+
+                                            <button>
+                                                <a href="Documents\Submittals\Setting_Compounds.pdf">SDS</a>
+                                                <img src="Images\Icons\download-icon.svg" alt="">
+                                            </button>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                     
+                    </div>
+                    
+                </article>
