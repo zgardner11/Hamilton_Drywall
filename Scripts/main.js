@@ -12,17 +12,15 @@ burger.addEventListener('click', () => {
 
 let products = document.querySelectorAll(".product-section");
 
-// let productRoot = document.querySelector("#finishing-products-main");
-
 const options = {
   root: null,
-  threshold: .4,
-  rootMargin: "220px"
+  threshold: .35,
+  rootMargin: "150px"
 };
 
 const observer = new IntersectionObserver(function (entries) {
 
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
 
     console.log(entries)
 

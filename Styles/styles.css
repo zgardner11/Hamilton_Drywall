@@ -290,7 +290,7 @@ nav a:before {
 
 .dropdown-nav{
   position: absolute;
-  padding: 1em 1.5em;
+  padding: 1em;
   top: 6em;
   height: fit-content;
   background: var(--navbar);
@@ -298,9 +298,11 @@ nav a:before {
   visibility: hidden;
   transition: 420ms all ease-in-out;
   border-radius: 0 2px 11px 2px;
+  z-index: 9999;
+  min-width: 15%;
 }
 
-.navlinks-menu li:hover .dropdown-nav{
+.navlinks ul > li:hover .dropdown-nav{
   display: block;
   visibility: visible;
   opacity: 1;
@@ -313,12 +315,13 @@ nav a:before {
   align-items: flex-start;
   color: var(--darkblue);
   font-weight: 600;
-  gap: 2em;
-  padding: 1em .7em;
+  gap: 3em;
+  padding: 1em .2em;
+  padding-left: .5vw;
 }
 
 .dropdown-nav ul li{
-  padding-bottom: 1rem;
+  padding-bottom: .5em;
   border-bottom: 2px solid var(--darkblue);
   border-radius: 7%;
   width: fit-content;
@@ -388,7 +391,7 @@ nav a:before {
 }
 
 .main-inner:nth-child(4){
-  background: var(--darkblue);
+  background: var(--navbar);
 }
 
 .main-inner:nth-child(5){
@@ -396,7 +399,7 @@ nav a:before {
 }
 
 .main-inner:last-child{
-  background: var(--silverblue);
+  background: var(--lightblue);
 }
 
 .main-inner:last-child .main-link a,
@@ -406,13 +409,13 @@ nav a:before {
   background: var(--darkblue);
 }
 
-.main-inner:last-child h3 a,
+/* change color of last two paragraphs and headers in main section */
+/* .main-inner:last-child h3 a,
 .main-inner:last-child p,
 .main-inner:nth-last-child(2) h3 a,
 .main-inner:nth-last-child(2) p{
-  /* change color of last two paragraphs and headers in main section */
   color: var(--darkblue);
-}
+} */
 
 .main-inner:nth-child(2n+1) h3,
 .main-inner:nth-child(2n+1) p{
@@ -432,7 +435,11 @@ nav a:before {
   max-height: 35rem;
   max-width: 45rem;
   border-radius: 4px;
-  transition: all 200ms ease-in-out;
+  transition: all 275ms ease-in-out;
+}
+
+.main-inner img:hover{
+  transform: scale(1.07);;
 }
 
 .main-inner article:not(.link){
@@ -456,7 +463,7 @@ nav a:before {
 .main-inner-select p{
   padding: 2rem 0;
   font-size: var(--mediumfont);
-  color: var(--navbar);
+  color: var(--darkblue2);
   max-width: 30ch;
 }
 
@@ -465,9 +472,9 @@ nav a:before {
 }
 
 .main-inner-select .main-link a{
-  background: var(--navbar);
+  background: var(--darkblue2);
   padding: 1rem;
-  color: black;
+  color: var(--navbar);
   font-style: italic;
   font-weight: 500;
   font-size: var(--textfont);
@@ -504,7 +511,7 @@ nav a:before {
   top: 5rem;
   bottom: 0;
   height: 2px;
-  background: var(--navbar);
+  background: var(--darkblue2);
   width: 40%;
 }
 
@@ -521,10 +528,6 @@ nav a:before {
 
 .main-inner-select h3:hover{
   transform: scale(1.02);
-}
-
-.main-inner img:hover{
-  transform: scale(1.2);;
 }
 
 #main-header-outer{
