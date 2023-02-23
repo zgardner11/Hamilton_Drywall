@@ -1577,7 +1577,7 @@ and (max-device-width: 1240px) {
   .navlinks ul li a {
     position: relative;
     color: black;
-    padding: .5rem 1rem;
+    /* padding: .5rem 1rem; */
     width: auto;
     height: 100%;
     align-items: center;
@@ -1697,7 +1697,7 @@ and (max-device-width: 1240px) {
   }
 
   .product-img{
-    scale: .75;
+    transform: scale(.75);
   }
 
   .product-section{
