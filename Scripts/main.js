@@ -14,8 +14,8 @@ let products = document.querySelectorAll(".product-section");
 
 const options = {
   root: null,
-  threshold: .35,
-  rootMargin: "150px"
+  threshold: .32,
+  rootMargin: "15px"
 };
 
 const observer = new IntersectionObserver(function (entries) {

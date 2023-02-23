@@ -13,7 +13,7 @@
   --silverblue: #b1c6d9;
   --darkblue: rgb(92, 116, 144);
   /* --darkblue2:#04224d; */
-  --darkblue2:#385171ed;
+  --darkblue2:#304769ed;
   --indigo:#2a2f3f;
   --purple: #160035;
   --green: #295b39;
@@ -162,6 +162,11 @@ a:active{
   top: 1px;
 }
 
+a[href^="tel"] {
+  color: inherit; /* inherit text color of parent element. */
+  text-decoration: none;
+}
+
 button{
   background: none;
   border: none;
@@ -178,16 +183,30 @@ button{
 }
 
 .page-header h2{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  font-size: var(--largefont);
+  font-size: var(--headerfont);
   font-weight: 600;
   color: var(--darkblue2);
   padding: 2rem;
   text-align: center;
   margin: auto;
   width: fit-content;
-  border-bottom: var(--silverblue) solid 2px;
+  /* border-bottom: var(--silverblue) solid 2px; */
+}
+
+.page-header h2::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25%;
+  content: '.';
+  color: transparent;
+  background: var(--silverblue);
+  height: 2px;
 }
 
 /* Navigation */
@@ -290,16 +309,15 @@ nav a:before {
 
 .dropdown-nav{
   position: absolute;
-  padding: 1em;
+  padding: 1.5em .8em;
   top: 6em;
   height: fit-content;
   background: var(--navbar);
   opacity: 0;
   visibility: hidden;
   transition: 420ms all ease-in-out;
-  border-radius: 0 2px 11px 2px;
+  border-radius: 0 0 11px 7px;
   z-index: 9999;
-  min-width: 15%;
 }
 
 .navlinks ul > li:hover .dropdown-nav{
@@ -313,17 +331,23 @@ nav a:before {
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  color: var(--darkblue);
-  font-weight: 600;
+  width: fit-content;
+  margin: auto;
+  color: var(--darkblue2);
+  font-weight: 700;
   gap: 3em;
-  padding: 1em .2em;
-  padding-left: .5vw;
+  padding: 1em .5em;
+}
+
+.navlinks li:first-child .dropdown-nav ul{
+  padding-left: 1.5em;
+  /* add extra spacing on first dropdown navigation menu */
 }
 
 .dropdown-nav ul li{
   padding-bottom: .5em;
   border-bottom: 2px solid var(--darkblue);
-  border-radius: 7%;
+  border-radius: 5%;
   width: fit-content;
   transition: border-bottom 200ms ease-in-out;
 }
@@ -512,7 +536,7 @@ nav a:before {
   bottom: 0;
   height: 2px;
   background: var(--darkblue2);
-  width: 40%;
+  width: 25%;
 }
 
 .main-inner:first-child{
@@ -752,6 +776,20 @@ h1::after{
   flex-direction: column;
   width: 100%;
   height: fit-content;
+}
+
+.product-section.pdf{
+  display: block;
+  background: white;
+}
+
+.product-section.pdf img{
+  display: block;
+  position: relative;
+  padding: 2rem;
+  width: 80%;
+  margin: auto;
+  /* border: black solid 2px; */
 }
 
 .product-section > header{
