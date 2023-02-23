@@ -794,7 +794,7 @@ h1::after{
   display: block;
   position: relative;
   padding: 2rem;
-  width: 80%;
+  /* width: 80%; */
   margin: auto;
   /* border: black solid 2px; */
 }
@@ -1630,7 +1630,7 @@ and (max-device-width: 1240px) {
   .main-inner{
     flex-direction: column;
     gap: 4rem 0;
-    padding: 3rem;
+    padding: 2em 1em;
   }
 
   .main-inner img{
