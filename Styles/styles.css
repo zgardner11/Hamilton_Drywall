@@ -504,7 +504,7 @@ nav a:before {
 }
 
 .main-inner-select .main-link a{
-  background: var(--darkblue2);
+  background: var(--logored);
   padding: 1rem;
   color: aliceblue;
   font-style: italic;
@@ -525,7 +525,7 @@ nav a:before {
 
 .main-inner-select .main-link a:hover{
   color: aliceblue;
-  background: var(--logored);
+  background: var(--purple);
 }
 
 .main-inner-select h3{
