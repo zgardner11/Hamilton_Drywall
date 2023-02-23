@@ -894,7 +894,7 @@ h1::after{
   height: 100%;
   flex-basis: 34%;
   padding: 1.5rem;
-  color: var(--darkblue);
+  color: var(--purple);
   border-right: var(--darkgrey) solid 2px;
 }
 
@@ -1659,12 +1659,21 @@ and (max-device-width: 1240px) {
   }
 
   #main-header{
-    order: -1;
+    /* order: -1; */
   }
 
   .main-header-shape{
     position: relative;
     width: 58%;
+  }
+
+  .shape1{
+    top: 2.5em;
+    margin-right: auto;
+  }
+
+  .shape2{
+    margin-left: auto;
   }
 
   .shape1 h2{
