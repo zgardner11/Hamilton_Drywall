@@ -869,6 +869,10 @@ h1::after{
   scale: 1.25;
 }
 
+.product-img.stc{
+  transform: scale(1.2);
+}
+
 .product-inner{
   display: flex;
   flex: .7;
@@ -1700,6 +1704,10 @@ and (max-device-width: 1240px) {
 
   .product-img{
     transform: scale(.75);
+  }
+
+  .product-img.stc{
+    transform: scale(1.1);
   }
 
   .product-section{
