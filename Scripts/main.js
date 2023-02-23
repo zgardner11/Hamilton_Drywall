@@ -14,7 +14,7 @@ let products = document.querySelectorAll(".product-section");
 
 const options = {
   root: null,
-  threshold: .23,
+  threshold: .34,
   rootMargin: "10px"
 };
 

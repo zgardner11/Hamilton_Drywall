@@ -7,8 +7,10 @@
 :root{
 
   --logored:#c3142b;
-  --darkred:#a70d22;
-  --navbar:#eff9fe;
+  /* --darkred:#a70d22eb; */
+  --darkred:#bb3738;
+  /* --navbar:#eff9fe; */
+  --navbar:#e8e8e8;
   --lightblue: rgb(144, 165, 186);  
   --silverblue: #b1c6d9;
   --darkblue: rgb(92, 116, 144);
@@ -18,7 +20,8 @@
   --purple: #160035;
   --green: #295b39;
   --grey: rgba(255, 255, 255, 0.393);
-  --darkgrey: rgba(255, 255, 255, 0.625);
+  --darkgrey: rgb(171, 171, 171);
+  --darkgrey2: rgb(132, 132, 132);
   --white:hsla(192, 10%, 90%, 0.979);
 
   --main-bg-color: linear-gradient(
@@ -404,9 +407,12 @@ nav a:before {
   width: 100%;
   padding: 7rem;
   gap: 7rem; 
+  /* border-bottom: var(--darkgrey) solid 1px; */
+  /* background: var(--navbar); */
+  background: rgba(255, 255, 255, 0.88);
 }
 
-.main-inner:nth-child(2){
+/* .main-inner:nth-child(2){
   background: var(--silverblue);
 }
 
@@ -424,14 +430,13 @@ nav a:before {
 
 .main-inner:last-child{
   background: var(--lightblue);
-}
+} */
 
-.main-inner:last-child .main-link a,
+/* .main-inner:last-child .main-link a,
 .main-inner:nth-last-child(2) .main-link a{
-  /* make last two buttons dark blue against white background */
   color: var(--navbar);
   background: var(--darkblue);
-}
+} */
 
 /* change color of last two paragraphs and headers in main section */
 /* .main-inner:last-child h3 a,
@@ -501,7 +506,7 @@ nav a:before {
 .main-inner-select .main-link a{
   background: var(--darkblue2);
   padding: 1rem;
-  color: var(--navbar);
+  color: aliceblue;
   font-style: italic;
   font-weight: 500;
   font-size: var(--textfont);
@@ -727,7 +732,7 @@ h1::after{
 /* Finishing Products */
 
 #finishing-products-main{
-  background: var(--darkblue2);
+  background: var(--darkgrey2);
   display: flex;
 }
 
@@ -805,7 +810,7 @@ h1::after{
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
   gap: 5em;
-  background: var(--darkblue);
+  background: var(--darkred);
 }
 
 .product-section > header > h2{
@@ -834,11 +839,11 @@ h1::after{
 }
 
 .product:nth-child(even){
-  background: var(--silverblue)
+  background: var(--grey);
 }
 
 .product:nth-child(odd){
-  background: var(--navbar)
+  background: var(--navbar);
 }
 
 .product-img{
@@ -875,11 +880,7 @@ h1::after{
 }
 
 .product:nth-child(odd) .product-inner{
-  background: var(--silverblue);
-}
-
-.product:nth-child(even) .product-description{
-  border-right: var(--silverblue) solid 2px;
+  background: var(--grey);
 }
 
 .product-description{
@@ -890,7 +891,7 @@ h1::after{
   flex-basis: 34%;
   padding: 1.5rem;
   color: var(--darkblue);
-  border-right: var(--navbar) solid 2px;
+  border-right: var(--darkgrey) solid 2px;
 }
 
 .product-description ul{
@@ -937,7 +938,7 @@ h1::after{
   grid-auto-flow: row;
   grid-template-columns: repeat(3, 8em);
   width: fit-content;
-  background: var(--darkblue);
+  background: var(--darkgrey2);
   color: var(--navbar);
   padding: .7em 1em;
   border-radius: 2px;
@@ -971,15 +972,16 @@ h1::after{
 }
 
 .product-buttons{
-  /* display: flex; */
+  display: flex;
+  gap: 1em;
   min-width: 18em;
-  width: 60%;
+  /* width: 60%; */
   max-width: 30em;
   margin: 2rem auto 0;
 }
 
 .product-button{
-  display: flex;
+  /* display: flex; */
   align-items: center;
   width: 100%;
   transition: transform 250ms ease-out;
@@ -991,7 +993,7 @@ h1::after{
 
 .product-button button{
   display: flex;
-  width: 38%;
+  width: 100%;
   height: 3em;
   border-radius: 1em;
   text-align: center;
@@ -1003,11 +1005,11 @@ h1::after{
 }
 
 .product-button:first-child button{
-  background: var(--logored);
+  background: var(--darkred);
 }
 
 .product-button:last-child button{
-  background: var(--darkblue);
+  background: var(--darkred);
 }
 
 .product-button button a{
@@ -1064,12 +1066,12 @@ h1::after{
 }
 
 #products-nav .product-nav.product-nav-active{
-  background: var(--logored);
+  background: var(--darkred);
   color: aliceblue;
 }
 
 #products-nav .product-nav:hover{
-  background: var(--logored);
+  background: var(--darkred);
   color: aliceblue;
 }
 
@@ -1077,7 +1079,7 @@ h1::after{
   position: relative;
   margin: 3rem auto 0;
   width: 15rem;
-  background-color: var(--logored);
+  background-color: var(--darkred);
   border-radius: 7px;
 }
 
