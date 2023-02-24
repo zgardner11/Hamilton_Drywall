@@ -6,22 +6,19 @@
 
 :root{
 
-  --logored:#c3142b;
-  /* --darkred:#a70d22eb; */
-  --darkred:#bb3738;
-  /* --navbar:#eff9fe; */
-  --navbar:#e8e8e8;
+  --logored:#c32033;
+  --darkred:#a72222;
+  --navbar:#ececec;
   --lightblue: rgb(144, 165, 186);  
   --silverblue: #b1c6d9;
-  --darkblue: rgb(92, 116, 144);
-  /* --darkblue2:#04224d; */
+  --darkblue: rgb(112, 133, 155);
   --darkblue2:#304769ed;
   --indigo:#2a2f3f;
-  --purple: #160035;
+  --purple: #0f0024;
   --green: #295b39;
-  --grey: rgba(255, 255, 255, 0.393);
-  --darkgrey: rgb(171, 171, 171);
-  --darkgrey2: rgb(132, 132, 132);
+  --grey: rgb(186, 197, 207);
+  --darkgrey: rgb(149, 163, 176);
+  --darkgrey2: rgb(96, 106, 119);
   --white:hsla(192, 10%, 90%, 0.979);
 
   --main-bg-color: linear-gradient(
@@ -44,52 +41,19 @@
     aliceblue,
     var(--navbar)
   );
+
   --lightgradient: linear-gradient(
     to top,
     var(--grey),
     var(--darkgrey)
   );
+
   --darkgradient: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.804),
     rgba(0, 0, 0, 0.409)
   );
-  --bluegradient: linear-gradient(
-    to bottom,
-     #04224d,
-    rgba(0, 0, 0, 0.654)
-  );
-  --greengradient: linear-gradient(
-    to bottom, 
-    var(--green),
-    rgba(0, 0, 0, 0.654)
-  );
-  --diaggradient: linear-gradient(to bottom, var(--darkblue) 5%, var(--darkblue2) 60%
-  );
-  --diaggradient2: linear-gradient(to bottom,
-  var(--silverblue) 65%, var(--navbar) 100%
-  );
-  --diaggradient3: linear-gradient(to bottom, var(--navbar) 0%,
-  var(--silverblue) 100%
-  );
-  --diaggradient4: linear-gradient(to top, var(--darkblue) 5%,
-  var(--silverblue) 100%
-  );
-  --diaggradient5: linear-gradient(to left top, var(--darkblue) 0%,
-  var(--silverblue) 16%
-  );
-  --productgradient: linear-gradient(to bottom right, var(--darkblue) 0%,
-  var(--silverblue) 75%
-  );
-  --productgradient2: linear-gradient(to top left, var(--darkgrey) 0%,
-  var(--silverblue) 100%
-  );
-  --productgradient3: linear-gradient(to top left, var(--darkgrey) 0%,
-  var(--silverblue) 100%
-  );
-  --productgradient4: linear-gradient(to top left, var(--darkgrey) 0%,
-  var(--silverblue) 100%
-  );
+
   
   --headerfont: 2.2rem;
   --largefont: 2rem;
@@ -229,9 +193,9 @@ button{
 }
 
 #logo{
-  width: 11em;
+  width: 10em;
   position: relative;
-  top: 4.5vh;
+  top: 2.5em;
 }
 
 .navlinks{
@@ -334,7 +298,7 @@ nav a:before {
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  width: fit-content;
+  min-width: 14em;
   margin: auto;
   color: var(--darkblue2);
   font-weight: 700;
@@ -732,25 +696,26 @@ h1::after{
 /* Finishing Products */
 
 #finishing-products-main{
-  background: var(--darkgrey2);
+  /* background: var(--darkgrey2); */
   display: flex;
 }
 
 #products-nav{
-  position: sticky;
-  top: 5em;
   width: 22%;
-  height: fit-content;
   z-index: 2;
+  background: var(--darkgrey2);
 }
 
 #products-nav ul{
+  position: sticky;
+  top: 11%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 2rem;
-  gap: 2rem;
+  gap: 2.5rem;
   height: fit-content;
+  margin-top: 2rem;
 }
 
 #products-nav a{
@@ -795,7 +760,21 @@ h1::after{
   position: relative;
   /* width: 80%; */
   margin: auto;
-  /* border: black solid 2px; */
+}
+
+.product-pdf{
+  padding: 2rem 0;
+}
+
+#flat-strap .product-pdf,
+#furring .product-pdf:nth-child(2){
+  /* increase spacing for whitespace on flat strap & furring image sections */
+  padding-top: 5rem;
+}
+
+#furring .product-pdf:nth-child(3){
+  /* remove spacing between furring channels */
+  padding-top: 0;
 }
 
 .product-section > header{
@@ -805,7 +784,7 @@ h1::after{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
   gap: 5em;
@@ -814,11 +793,11 @@ h1::after{
 
 .product-section > header > h2{
   /* padding-left: 5rem; */
-  font-size: var(--largefont);
-  font-weight: 600;
+  font-size: var(--headerfont);
+  font-weight: 700;
   color: var(--navbar);
   border-bottom: aliceblue double 4px;
-  padding: .7em;
+  padding-bottom: .4em;
 }
 
 .product-section > header > h3{
@@ -1033,10 +1012,6 @@ h1::after{
   margin-left: auto;
 }
 
-#product-catalog-download.product-button.button-dark{
-  background: var(--darkred);
-}
-
 .product-table.table-twocol{
   grid-template-columns: repeat(2, 10em);
 }
@@ -1082,7 +1057,7 @@ h1::after{
   position: relative;
   margin: 3rem auto 0;
   width: 15rem;
-  background-color: var(--darkred);
+  background-color: var(--logored);
   border-radius: 7px;
 }
 
@@ -1095,6 +1070,15 @@ h1::after{
   padding: 1rem;
   color: aliceblue;
 }
+
+#product-catalog-download.product-button{
+   display: flex;
+}
+
+#product-catalog-download.product-button.button-dark{
+  background: var(--darkred);
+}
+
 
 /* Cornerbeads */
 
@@ -1305,7 +1289,7 @@ h1::after{
 #tech-data-outer{
   display: flex;
   gap: 2rem;
-  background: var(--silverblue);
+  background: var(--grey);
   height: fit-content;
   padding: 4rem;
   justify-content: center;
@@ -1317,9 +1301,8 @@ h1::after{
   height: fit-content;
   width: 22%;
   max-width: 25em;
-  border: aliceblue solid 1px;
   border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.209);
+  box-shadow: -2px 2px 1px rgba(0, 0, 11, 0.3);
 }
 
 #tech-data-nav ul{
@@ -1327,7 +1310,7 @@ h1::after{
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background: var(--lightgradient);
+  background: var(--grey);
 }
 
 #tech-data-nav li{
@@ -1336,7 +1319,7 @@ h1::after{
   width: 14vw;
   padding: 1rem .5rem;
   border-radius: 4px;
-  background: var(--darkblue);
+  background: var(--indigo);
   box-shadow: -4px 2px 7px rgba(0, 0, 0, 0.209);
   color: aliceblue;
   transition: all 300ms ease-out;
@@ -1368,8 +1351,6 @@ h1::after{
   padding: 2rem;
   border-radius: 4px;
   width: 100%;
-  
-  /* border: green solid 2px; */
 }
 
 .tech-data-list a{
@@ -1379,7 +1360,7 @@ h1::after{
   width: 80%;
   height: 7em;
   padding: 2rem;
-  background: var(--indigo);
+  background: var(--purple);
   color: aliceblue;
   text-align: center;
   border-radius: 2px 2px 11px 11px;
@@ -1389,26 +1370,25 @@ h1::after{
   margin: auto;
 }
 
-.tech-data-list a:nth-child(3n+1){
+/* .tech-data-list a:nth-child(3n+1){
   background: var(--navbar);
   color: black;
-}
+} */
 
-.tech-data-list a:nth-child(3n){
+/* .tech-data-list a:nth-child(){
   background: var(--darkblue);
-  /* color: black; */
 }
 
 #tech-data-nav .data-nav-active{
   background: var(--logored);
-}
+} */
 
 /* contact page */
 
 /* Footer */
 
 footer{
-  background-color: var(--logored);
+  background-color: var(--darkred);
   text-align: center;
   font-weight: 300;
   padding: 1em;
@@ -1451,7 +1431,7 @@ transform: scale(1.02);
 
 /* General responsiveness */
 
-@media (min-device-width: 320px) 
+@media (min-device-width: 280px) 
 and (max-device-width: 1240px) {
 
   body,html {
@@ -1602,10 +1582,14 @@ and (max-device-width: 1240px) {
   ul .book-button{
     display: none;
   }
-  
-  .navlinks-menu li:hover .dropdown-nav{
-    display: none;
+
+  .dropdown{
+    display:none;
   }
+  
+  /* .navlinks-menu li:hover .dropdown-nav{
+    display: none;
+  } */
   
   .page-header{
     padding-top: 1rem;
@@ -1655,10 +1639,6 @@ and (max-device-width: 1240px) {
     max-width: 25em;
     margin: auto;
     padding: 0;
-  }
-
-  #main-header{
-    /* order: -1; */
   }
 
   .main-header-shape{
