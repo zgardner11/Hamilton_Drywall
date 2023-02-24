@@ -793,7 +793,6 @@ h1::after{
 .product-section.pdf img{
   display: block;
   position: relative;
-  padding: 2rem;
   /* width: 80%; */
   margin: auto;
   /* border: black solid 2px; */
