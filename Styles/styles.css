@@ -1485,16 +1485,12 @@ and (max-device-width: 1240px)
     color:var(--white);
     height: 10vh;
   }
-
-  /* .navlinks-menu > li > a{
+/* 
+  .navlinks-menu > li > a{
     display: none;
   } */
 
-  .navlinks-menu > li > a:hover{
-    display: none;
-  }
-/* 
-  .navlinks-menu > li > a::after{
+  /* .navlinks-menu > li > a::after{
     display: none;
   } */
   
