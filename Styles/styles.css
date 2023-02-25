@@ -235,7 +235,7 @@ button{
   color: var(--logored);
 }
 
-.navlinks-menu > li > a:after{
+.navlinks-menu > li > a::after{
   position: absolute;
   bottom: 4px;
   left: 0;
@@ -248,13 +248,13 @@ button{
   height: 2px;
 }
 
-.navlinks ul li>a:hover:after{
+.navlinks ul li>a:hover::after{
   width: 50%;
 }
 
 nav a,
-nav a:after,
-nav a:before {
+nav a::after,
+nav a::before {
   transition: all .4s;
 }
 
