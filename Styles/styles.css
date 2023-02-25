@@ -1462,7 +1462,6 @@ and (max-device-width: 1240px) {
     /* hide navigation when off screen */
     overflow-x: hidden;
     scroll-padding-top: 0;
-    pointer-events: none;
   }
 
 /*  Navigation  */
@@ -1610,6 +1609,7 @@ and (max-device-width: 1240px) {
 
   .dropdown{
     display:none;
+    pointer-events: none;
   }
   
   .page-header{
