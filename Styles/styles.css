@@ -180,6 +180,8 @@ button{
 
 /* Navigation */
 
+
+
 #navbar {
   display: flex;
   position: sticky;
@@ -231,8 +233,16 @@ button{
   font-size: var(--textfont);
 }
 
-.navlinks-menu > li > a:hover {
-  color: var(--logored);
+@media (hover:hover){
+  
+  .navlinks-menu > li > a:hover {
+    color: var(--logored);
+  }
+
+  .navlinks ul li>a:hover::after{
+    width: 50%;
+  }
+  
 }
 
 .navlinks-menu > li > a::after{
@@ -246,10 +256,6 @@ button{
   color: transparent;
   background: var(--darkblue);
   height: 2px;
-}
-
-.navlinks ul li>a:hover::after{
-  width: 50%;
 }
 
 nav a,
