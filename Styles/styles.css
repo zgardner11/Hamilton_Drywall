@@ -231,8 +231,6 @@ button{
   font-size: var(--textfont);
 }
 
-/* @media (hover:hover){ */
-
 .navlinks-menu > li > a:hover {
   color: var(--logored);
 }
@@ -1481,6 +1479,18 @@ and (max-device-width: 1240px)
     color:var(--white);
     height: 10vh;
   }
+
+  /* .navlinks-menu > li > a{
+    display: none;
+  } */
+
+  .navlinks-menu > li > a:hover{
+    display: none;
+  }
+/* 
+  .navlinks-menu > li > a::after{
+    display: none;
+  } */
   
   .burger {
     position: fixed; /*keeps hamburger menu locked on right side of screen*/
