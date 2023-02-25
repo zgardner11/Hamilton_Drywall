@@ -180,8 +180,6 @@ button{
 
 /* Navigation */
 
-@media (hover:hover){
-
 #navbar {
   display: flex;
   position: sticky;
@@ -232,6 +230,8 @@ button{
   justify-content: center;
   font-size: var(--textfont);
 }
+
+/* @media (hover:hover){ */
 
 .navlinks-menu > li > a:hover {
   color: var(--logored);
@@ -349,7 +349,7 @@ nav a:before {
   font-weight: 600;
 }
 
-}
+/* } */
 
 /* Index */
 
@@ -1460,9 +1460,10 @@ transform: scale(1.02);
 
 /* General responsiveness */
 
-@media (min-device-width: 280px) 
+@media (hover: none), 
+(min-device-width: 280px) 
 and (max-device-width: 1240px) 
-and (hover: none) {
+{
 
   body,html {
     /* hide navigation when off screen */
