@@ -67,6 +67,8 @@
 
 /* General */
 
+
+
 * {
   box-sizing: border-box; /*accounts for margin and padding in sizing, easier to size */
   margin: 0;
@@ -177,6 +179,8 @@ button{
 }
 
 /* Navigation */
+
+@media (hover:hover){
 
 #navbar {
   display: flex;
@@ -343,6 +347,8 @@ nav a:before {
 .navlinks .active-nav{
   color: var(--logored);
   font-weight: 600;
+}
+
 }
 
 /* Index */
@@ -714,7 +720,6 @@ h1::after{
   justify-content: space-evenly;
   padding: 2rem;
   gap: 2.5rem;
-  height: fit-content;
   margin-top: 2rem;
 }
 
@@ -1456,7 +1461,8 @@ transform: scale(1.02);
 /* General responsiveness */
 
 @media (min-device-width: 280px) 
-and (max-device-width: 1240px) {
+and (max-device-width: 1240px) 
+and (hover: none) {
 
   body,html {
     /* hide navigation when off screen */
@@ -1688,7 +1694,6 @@ and (max-device-width: 1240px) {
 
   #finishing-products-main{
     flex-wrap: wrap;
-    gap: 2rem;
   }
 
   #finishing-products{
@@ -1697,13 +1702,14 @@ and (max-device-width: 1240px) {
 
   #products-nav{
     position: relative;
-    margin: 1rem auto;
-    width: 75%;
+    width: 100%;
     top: 0;
   }
 
   #products-nav ul{
     margin-top: 0;
+    height: 100%;
+    padding: 5em;
   }
 
   .product{
