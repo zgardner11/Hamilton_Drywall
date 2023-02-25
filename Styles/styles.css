@@ -1613,7 +1613,7 @@ and (max-device-width: 1240px)
     display: none;
   }
 
-  .dropdown{
+  .dropdown-nav{
     display:none;
     pointer-events: none;
   }
