@@ -231,7 +231,7 @@ button{
   font-size: var(--textfont);
 }
 
-@media (hover:hover){
+/* @media (hover:hover){ */
   
   .navlinks-menu > li > a:hover {
     color: var(--logored);
@@ -247,7 +247,7 @@ button{
     opacity: 1;
   }
   
-}
+/* } */
 
 .navlinks-menu > li > a::after{
   position: absolute;
