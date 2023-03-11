@@ -178,8 +178,6 @@ button{
 
 /* Navigation */
 
-
-
 #navbar {
   display: flex;
   position: sticky;
@@ -379,44 +377,8 @@ nav a::before {
   width: 100%;
   padding: 7rem;
   gap: 7rem; 
-  /* border-bottom: var(--darkgrey) solid 1px; */
-  /* background: var(--navbar); */
   background: rgba(255, 255, 255, 0.7);
 }
-
-/* .main-inner:nth-child(2){
-  background: var(--silverblue);
-}
-
-.main-inner:nth-child(3){
-  background: var(--lightblue);
-}
-
-.main-inner:nth-child(4){
-  background: var(--navbar);
-}
-
-.main-inner:nth-child(5){
-  background: var(--silverblue);
-}
-
-.main-inner:last-child{
-  background: var(--lightblue);
-} */
-
-/* .main-inner:last-child .main-link a,
-.main-inner:nth-last-child(2) .main-link a{
-  color: var(--navbar);
-  background: var(--darkblue);
-} */
-
-/* change color of last two paragraphs and headers in main section */
-/* .main-inner:last-child h3 a,
-.main-inner:last-child p,
-.main-inner:nth-last-child(2) h3 a,
-.main-inner:nth-last-child(2) p{
-  color: var(--darkblue);
-} */
 
 .main-inner:nth-child(2n+1) h3,
 .main-inner:nth-child(2n+1) p{
@@ -638,46 +600,6 @@ h1::after{
   font-weight: 600;
 }
 
-/* #main-select-outer{
-  width: 100%;
-  height: fit-content;
-  margin: 8em auto 2em;
-  padding: 5rem 8rem;
-  background: var(--darkblue);
-  backdrop-filter: blur(2rem);
-} */
-
-/* .main-select-inner{
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  max-width: 50rem;
-  flex: 1;
-  justify-content: center;
-  gap: 4em;
-  padding: 4em;
-  border: var(--navbar) 1px solid;
-  border-radius: 4px;
-  box-shadow: 0 2px 11px rgba(0, 0, 0, 0.4
-  );
-  background: var(--sidegradient);
-}
-
-.main-select{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 14em;
-  height: 7em;
-  color: white;
-  background: var(--darkblue);
-  text-shadow: -4px 7px 10px rgba(0, 0, 0, 0.244);
-  box-shadow: -2px 2px 7px rgba(0, 0, 0, 0.338);
-  border-radius: 4px 4px 11px 11px;
-  transition: transform 250ms ease-in-out, background-color 300ms ease-in-out;
-} */
-
 .main-select:hover{
   transform: scale(1.04);
   cursor: pointer;
@@ -694,7 +616,8 @@ h1::after{
   padding: 5rem;
 }
 
-.tech-data-main{
+.products-main{
+  /* align 3 product images */
   display: flex;
   max-width: 38em;
 }
@@ -702,7 +625,6 @@ h1::after{
 /* Finishing Products */
 
 #finishing-products-main{
-  /* background: var(--darkgrey2); */
   display: flex;
 }
 
@@ -730,6 +652,7 @@ h1::after{
   text-align: center;
   width: 100%;
   height: calc(70vh/7);
+  padding: 1em;
   color: black;
   font-weight: 700;
   border-radius: 0 11px 11px 0;
@@ -873,8 +796,8 @@ h1::after{
 
 .product-description{
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
+  align-items: center;
   height: 100%;
   flex-basis: 34%;
   padding: 1rem 2rem;
@@ -1018,6 +941,7 @@ h1::after{
   position: relative;
   width: 2rem;
   margin-left: auto;
+  right: 0.5em;
 }
 
 .product-table.table-twocol{
@@ -1072,7 +996,6 @@ h1::after{
 #product-catalog-download a{
   display: flex;
   justify-content: center;
-  border-right: var(--navbar) solid 2px;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -1469,26 +1392,11 @@ and (max-device-width: 1240px)
   }
 
   #navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    background-color: var(--navbar);
-    color:var(--white);
-    height: 10vh;
+    height: 11vh;
   }
-/* 
-  .navlinks-menu > li > a{
-    display: none;
-  } */
 
-  /* .navlinks-menu > li > a::after{
-    display: none;
-  } */
-  
   .burger {
     position: fixed; /*keeps hamburger menu locked on right side of screen*/
-    top: 2.5rem;
     right: 1rem;
     display: flex;
     flex-direction: column;
@@ -1535,7 +1443,7 @@ and (max-device-width: 1240px)
   
   .logo-wrapper{
     display: flex;
-    margin: 1em auto 2.5em;
+    margin: 1em auto 0;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -1545,21 +1453,23 @@ and (max-device-width: 1240px)
   }
   
   #logo{
+    width: 11vh;
+    top: 0;
     order: 1;
-    /* display: none; */
   }
   
   #logo-nav-outer{
+    width: 100%;
     height: 100%;
     display: flex;
+    margin: auto;
     justify-content: center;
-    align-items: center;
   }
   
   #logo-nav{
-    width: 7em;
-    margin: .5em auto 0;
-    padding: .5em;
+    width: 15vh;
+    margin: auto;
+    padding: 1em;
     position: relative;
   }
   
@@ -1583,7 +1493,7 @@ and (max-device-width: 1240px)
     height: 100vh;
     top: 0;
     width: 100vw;
-    padding: 8rem 0;
+    padding: 0;
     background: var(--main-bg-color);
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
@@ -1591,12 +1501,12 @@ and (max-device-width: 1240px)
   
   .navlinks ul li{
     width: 100%;
+    margin: 0 auto;
   }
   
   .navlinks ul li a {
     position: relative;
     color: black;
-    /* padding: .5rem 1rem; */
     width: auto;
     height: 100%;
     align-items: center;
@@ -1608,9 +1518,14 @@ and (max-device-width: 1240px)
     content: '';
     width: 100%;
     bottom: 0;
-    height: 5px;
+    height: 4px;
     border-radius: 50%;
-    color: var(--logored);
+    background-color: var(--darkblue2);
+    opacity: .5;
+  }
+
+  .navlinks-menu li:last-child a::after{
+    display: none;
   }
   
   ul .book-button{
@@ -1634,6 +1549,7 @@ and (max-device-width: 1240px)
   /* Index/Home */
 
   #home-img{
+    margin-bottom: 0;
     width: 100%;
   }
 
@@ -1654,6 +1570,23 @@ and (max-device-width: 1240px)
 
   .main-inner-select{
     width: 40ch;
+  }
+
+  .main-inner-select .main-link{
+    /* center all buttons mobile */
+    justify-content:center;
+  }
+
+  .main-inner-select h3,
+   .main-inner-select p{
+    /* center all headers mobile */
+    text-align: center;
+    margin: auto;
+  }
+
+  .main-inner-select h3 a::after{
+    /* center all seperating lines mobile */
+    margin: auto;
   }
   
   .main-wrap{
@@ -1761,10 +1694,6 @@ and (max-device-width: 1240px)
 
   .product-img img:hover{
     transform: scale(1.1) translate(0px);
-  }
-
-  .product-button img{
-    scale: .8;
   }
 
   #product-catalog-download{
