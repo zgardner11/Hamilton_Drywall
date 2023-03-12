@@ -1127,12 +1127,14 @@ h1::after{
 }
 
 #industry section article img{
+  display: flex;
+  align-items: center;
   margin: auto;
-  padding: 2rem 4rem;
-  min-height: 10rem;
-  max-height: 25rem;
-  max-width: 40rem;
+  height: 22vh;
+  max-height: 11em;
+  max-width: 30em;
   transition: all 250ms ease-in-out;
+  border-radius: 4px;
 }
 
 #industry section article img:hover
@@ -1528,6 +1530,10 @@ and (max-device-width: 1240px)
     display: none;
   }
   
+  .navlinks .active-nav{
+    font-size: var(--smallfont);
+  }
+
   ul .book-button{
     display: none;
   }
@@ -1858,6 +1864,11 @@ and (max-device-width: 1240px)
   #industry section article p{
     width: 100%;
     max-height: fit-content;
+  }
+
+  #industry section article img{
+    margin: 0 auto 3em;
+    padding: 2em;
   }
 
   #industry section:nth-child(even) article:first-child{
