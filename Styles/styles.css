@@ -469,6 +469,10 @@ nav a::before {
   /* border-bottom: var(--silverblue) solid 2px; */
 }
 
+.main-inner-select h3 a{
+  position: relative;
+}
+
 .main-inner-select h3 a::after{
   content: '';
   position: absolute;
@@ -636,7 +640,7 @@ h1::after{
 
 #products-nav ul{
   position: sticky;
-  top: 11%;
+  top: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -652,6 +656,7 @@ h1::after{
   text-align: center;
   width: 100%;
   height: calc(70vh/7);
+  max-height: 5em;
   padding: 1em;
   color: black;
   font-weight: 700;
@@ -1130,9 +1135,9 @@ h1::after{
   display: flex;
   align-items: center;
   margin: auto;
-  height: 22vh;
-  max-height: 11em;
-  max-width: 30em;
+  height: 20vh;
+  max-height: 8em;
+  /* max-width: 35em; */
   transition: all 250ms ease-in-out;
   border-radius: 4px;
 }
@@ -1574,6 +1579,12 @@ and (max-device-width: 1240px)
     order: 1;
   }
 
+  .main-inner:nth-child(3) h3 a::after,
+  .main-inner:nth-child(4) h3 a::after{
+    /* account for spacing of the separating line between header and paragaph when the header is two lines or more. revisit in future */
+    top: 8rem; 
+  }
+
   .main-inner-select{
     width: 40ch;
   }
@@ -1759,10 +1770,7 @@ and (max-device-width: 1240px)
     padding: .5em 0;
   }
 
-  .main-inner:nth-child(3) h3 a::after{
-    /* account for spacing of the separating line between header and paragaph when the header is two lines or more. revisit in future */
-    top: 8rem; 
-  }
+
 }
 
  /* Responsiveness for phone */
@@ -1813,12 +1821,6 @@ and (max-device-width: 1240px)
     text-align: center;
     margin: auto;
     padding: .5em 0;
-  }
-
-  .main-inner:nth-child(3) h3 a::after,
-  .main-inner:nth-child(4) h3 a::after{
-    /* account for spacing of the separating line between header and paragaph when the header is two lines or more. revisit in future */
-    top: 8rem; 
   }
 
   /* Accessories */

@@ -14,8 +14,8 @@ let products = document.querySelectorAll(".product-section");
 
 const options = {
   root: null,
-  threshold: .34,
-  rootMargin: "10px"
+  threshold: [.5],
+  rootMargin: "-65px"
 };
 
 const observer = new IntersectionObserver(function (entries) {
@@ -31,7 +31,7 @@ const observer = new IntersectionObserver(function (entries) {
         if(entry.target.id === navProduct.dataset.label){
             navProduct.classList.add("product-nav-active");
             console.log("data: " + navProduct.dataset.label);
-            console.log("target: " + entry.target.id);
+            console.log("target: " + entry.isIntersecting);
         }
       }
     }
@@ -54,6 +54,7 @@ const observer = new IntersectionObserver(function (entries) {
 
 products.forEach(product => {
   observer.observe(product);
+  
 });
 
 
