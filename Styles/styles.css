@@ -695,21 +695,6 @@ h1::after{
   margin: auto;
 }
 
-.product-pdf{
-  padding: 2rem 0;
-}
-
-#flat-strap .product-pdf,
-#furring .product-pdf:nth-child(2){
-  /* increase spacing for whitespace on flat strap & furring image sections */
-  padding-top: 5rem;
-}
-
-#furring .product-pdf:nth-child(3){
-  /* remove spacing between furring channels */
-  padding-top: 0;
-}
-
 .product-section > header{
   display: flex;
   flex-direction: column;
@@ -747,7 +732,7 @@ h1::after{
   align-items: center;
   border-bottom: var(--navbar) solid 2px;
   width: 100%;
-  padding: 4em 0;
+  padding: 11em 0;
 }
 
 .product:nth-child(even){
@@ -1013,6 +998,21 @@ h1::after{
 
 /* Cornerbeads */
 
+.product-pdf{
+  padding: 7em;
+}
+
+#flat-strap .product-pdf,
+#furring .product-pdf:nth-child(2){
+  /* increase spacing for whitespace on flat strap & furring image sections */
+  padding-top: 5rem;
+}
+
+#furring .product-pdf:nth-child(3){
+  /* remove spacing between furring channels */
+  padding-top: 0;
+}
+
 #products-nav.cornerbeads-nav ul{
   padding: 1em 2em;
 }
@@ -1026,6 +1026,16 @@ h1::after{
   margin: auto;
   width: fit-content;
   gap: 0 7rem;
+}
+
+#paper-faced .product-pdf{
+  padding: 10rem;
+}
+
+#bare-metal .product-pdf:nth-of-type(1),
+#bullnose .product-pdf:nth-of-type(1){
+  /* reduce space between bare metal pdf images */
+  padding-bottom: 1em;
 }
 
 /* Accessories */

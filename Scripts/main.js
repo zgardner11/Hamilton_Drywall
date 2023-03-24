@@ -8,54 +8,6 @@ burger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 })
 
-// Product navigation
-
-let products = document.querySelectorAll(".product-section");
-
-const options = {
-  root: null,
-  threshold: [.5],
-  rootMargin: "-65px"
-};
-
-const observer = new IntersectionObserver(function (entries) {
-
-  entries.forEach((entry) => {
-
-    console.log(entries)
-
-    let navProducts = document.querySelectorAll(".product-nav");
-
-    function activeNav() {
-      for (const navProduct of navProducts) {
-        if(entry.target.id === navProduct.dataset.label){
-            navProduct.classList.add("product-nav-active");
-            console.log("data: " + navProduct.dataset.label);
-            console.log("target: " + entry.isIntersecting);
-        }
-      }
-    }
-
-      if(entry.isIntersecting) {
-        activeNav();
-        console.log(entries)
-      }
-
-      else{
-        for (const navProduct of navProducts) {
-          navProduct.classList.remove("product-nav-active");
-          // console.log(navProduct.classList)
-        }
-        return
-      }
-      
-    });
-}, options);
-
-products.forEach(product => {
-  observer.observe(product);
-  
-});
 
 
 
