@@ -1346,6 +1346,19 @@ h1::after{
   margin: 2rem auto;
 }
 
+.contact-info a{
+  color: var(--navbar);
+  border-bottom: var(--darkgrey) solid 2px;
+  /* border-radius: 11%; */
+  padding-bottom: .4em;
+  transition: all 275ms ease-out;
+}
+
+.contact-info a:hover{
+  transform: scale(1.2);
+  border-bottom: var(--navbar) double 7px;
+}
+
 /* Footer */
 
 footer{
