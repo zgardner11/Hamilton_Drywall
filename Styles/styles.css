@@ -386,7 +386,7 @@ nav a::before {
 
 .main-inner article:not(.link){
   max-height: 100%;
-  padding: 2.5em;
+  padding: 2em;
   min-width: 20em;
   max-width: 56ch;
   box-shadow: -2px 2px 1px rgba(0, 0, 11, 0.3);
@@ -1673,6 +1673,12 @@ and (max-device-width: 1240px)
     padding: 0;
   }
 
+  .product-pdf,
+  #paper-faced .product-pdf{
+    /* remove space on mobile for pdf pics */
+    padding: 3em 1em;
+  }
+
   .product-img{
     transform: scale(.75);
   }
@@ -1687,7 +1693,7 @@ and (max-device-width: 1240px)
 
   .product-section > header{
     justify-content: center;
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .product-section > header > h2{
@@ -1721,6 +1727,11 @@ and (max-device-width: 1240px)
 
   .product:nth-child(2n) .product-description{
     border: none;
+  }
+
+  #products-nav.cornerbeads-nav ul{
+    /* increase whitespace on page product nav for mobile */
+    padding: 4em;
   }
 
   /* Cornerbeads */
