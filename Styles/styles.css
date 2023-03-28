@@ -457,12 +457,11 @@ nav a::before {
   position: absolute;
   left: 0;
   right: 0;
-  top: 7rem;
+  top: 5rem;
   bottom: 0;
   height: 2px;
   background: var(--darkblue2);
   width: 25%;
-  border: orange solid 3px;
 }
 
 .main-inner:first-child{
@@ -1126,7 +1125,7 @@ h1::after{
   margin: auto;
   height: 20vh;
   max-height: 8em;
-  /* max-width: 35em; */
+  max-width: 35em;
   transition: all 250ms ease-in-out;
   border-radius: 4px;
 }
@@ -1581,7 +1580,6 @@ and (max-device-width: 1240px)
     order: 1;
   }
 
-  .main-inner:nth-child(3) h3 a::after,
   .main-inner:nth-child(4) h3 a::after{
     /* account for spacing of the separating line between header and paragaph when the header is two lines or more. revisit in future */
     top: 8rem; 
@@ -1860,10 +1858,6 @@ and (max-device-width: 1240px)
   }
 
   /* Industry Links */
-
-  #industry header h2{
-    width: 65%;
-  }
 
   #industry section{
     flex-direction: column;
