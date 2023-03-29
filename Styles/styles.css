@@ -1326,7 +1326,7 @@ h1::after{
 
 .contact-info a{
   color: var(--navbar);
-  border-bottom: var(--darkgrey) solid 2px;
+  border-bottom: black solid 2px;
   /* border-radius: 11%; */
   padding-bottom: .4em;
   transition: all 275ms ease-out;
