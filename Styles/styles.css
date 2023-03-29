@@ -1328,7 +1328,7 @@ h1::after{
   color: var(--navbar);
   border-bottom: black solid 2px;
   /* border-radius: 11%; */
-  padding-bottom: .4em;
+  padding-bottom: .2em;
   transition: all 275ms ease-out;
 }
 
