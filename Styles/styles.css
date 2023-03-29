@@ -1878,6 +1878,7 @@ and (max-device-width: 1240px)
   #industry section article img{
     margin: 0 auto 3em;
     padding: 2em;
+    max-width: 15em;
   }
 
   #industry section:nth-child(even) article:first-child{
