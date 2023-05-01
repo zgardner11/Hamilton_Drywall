@@ -10,13 +10,15 @@ burger.addEventListener('click', () => {
 
 // Tech data drop down items
 
-const dataHeader = document.querySelector('.dataHeader')
-const dataItem = document.querySelector('.dataItem')
+function toggleClass( element ) {
+    let data = 'dataHeader hidden';
 
-dataHeader.addEventListener('click', () => {
-    dataItem.classList.toggle('active');
+    if ( element.className == data){
+        element.className = data.replace('hidden', 'active');
+    } else {
+        element.className = data;
+    }
 }
-)
 
 
 
