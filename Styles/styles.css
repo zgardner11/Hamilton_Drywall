@@ -13,7 +13,7 @@
   --silverblue: #b1c6d9;
   --darkblue: rgb(100, 113, 131);
   --darkblue2:#304769ed;
-  --indigo:#2a2f3f;
+  --indigo:#171625;
   --purple: #0f0024;
   --green: #295b39;
   --grey: rgb(202, 208, 214);
@@ -216,6 +216,7 @@ button{
 
 .navlinks ul li{
   flex: 1;
+  position: relative;
 }
 
 .navlinks-menu > li > a{
@@ -270,14 +271,16 @@ nav a::before {
 
 .dropdown-nav{
   position: absolute;
-  padding: 1.5em .8em;
-  top: 6em;
+  padding: 1em 0;
+  left: 0;
+  right: 0;
+  margin-top: .3em;
   height: fit-content;
   background: var(--navbar);
   opacity: 0;
   visibility: hidden;
   transition: 420ms all ease-in-out;
-  border-radius: 0 0 11px 7px;
+  border-radius: 0 0 .7em .7em;
   z-index: 9999;
 }
 
@@ -286,12 +289,13 @@ nav a::before {
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 14em;
+  min-width: 11em;
   margin: auto;
   color: var(--darkblue2);
   font-weight: 700;
   gap: 3em;
   padding: 1em .5em;
+  text-align: center;
 }
 
 .navlinks li:first-child .dropdown-nav ul{
@@ -300,6 +304,8 @@ nav a::before {
 }
 
 .dropdown-nav ul li{
+  position: relative;
+  margin: auto;
   padding-bottom: .5em;
   border-bottom: 2px solid var(--darkblue);
   border-radius: 5%;
@@ -529,7 +535,7 @@ h1::after{
   color: var(--navbar);
   width: fit-content;
   height: fit-content;
-  text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px 1px 1px rgba(0, 0, 0, .3);
   transition: transform 200ms ease-in-out;
 }
 
@@ -547,7 +553,7 @@ h1::after{
 #flag img{
   border-radius: 3px;
   transition: transform 100ms ease-in-out;
-  box-shadow: 2px 2px 1px rgba(0, 0, 11, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 11, 0.2);
 }
 
 .shape1{
@@ -1212,7 +1218,6 @@ h1::after{
 
 .tech-data-list{
   display: grid;
-  gap: 5rem 2rem;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   /* grid-auto-rows: 7rem; */
   align-items: center;
@@ -1228,7 +1233,6 @@ h1::after{
   align-items: center;
   width: 75%;
   height: 100%;
-  padding: 1.5em;
   background: var(--indigo);
   color: var(--navbar);
   border-radius: 2px 2px 11px 11px;
@@ -1241,6 +1245,18 @@ h1::after{
 
 .tech-data-list a{
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-data-list a,
+.dataHeader h3{
+  padding: 1.5em;
+}
+
+.tech-data-list h3:hover{
+  background: var(--navbar);
+  color: black;
 }
 
 .dataHeader.hidden .dataItem{
@@ -1253,15 +1269,18 @@ h1::after{
   flex-direction: column;
   align-items: center;
   gap: 1em;
+  width: 75%;
+  margin: auto;
   padding: 2em;
   transition: all 250ms ease-in-out;
+  border-radius: 2px 2px 3em 3em;
 }
 
 .dataItem a{
   background-color: var(--darkgrey);
-  width: 70%;
+  width: fit-content;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1.5em 3em;
   border-radius: 3em;
   margin: 1.5em 0;
   color: black;
@@ -1321,8 +1340,7 @@ h1::after{
   border-radius: 2px 4px 22px 2px;
 }
 
-#tech-data-nav li:hover,
-#tech-data-outer .tech-data-list a:hover{
+#tech-data-nav li:hover{
   transform: scale(1.02);
   background: var(--navbar);
   color: black;
@@ -1331,7 +1349,6 @@ h1::after{
 #tech-data-nav li a:hover{
   color: black;
 }
-
 
 #tech-data-nav .data-nav-active a{
   background: var(--navbar);
@@ -1364,8 +1381,7 @@ h1::after{
 
 .contact-info a{
   color: var(--navbar);
-  border-bottom: black solid 2px;
-  /* border-radius: 11%; */
+  border-bottom: var(--indigo) solid 1px;
   padding-bottom: .2em;
   transition: all 275ms ease-out;
 }
@@ -1785,7 +1801,6 @@ and (max-device-width: 1240px)
 
   .tech-data-list{
     width: 100%;
-    gap: 0;
   }
 
   #tech-data-outer{
@@ -1803,6 +1818,11 @@ and (max-device-width: 1240px)
 
   #tech-data-nav li{
     width: 90%;
+  }
+
+  .dataItem{
+    border-radius: 0;
+    width: 100%;
   }
   
 }
