@@ -1212,98 +1212,17 @@ h1::after{
 
 /* Technical Data */
 
-.tech-data{
-  position: relative;
-}
-
-.tech-data-list{
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  /* grid-auto-rows: 7rem; */
-  align-items: center;
-  justify-content: center;
-  background: var(--diaggradient6);
-  padding: 2rem;
-  width: 38%;
-}
-
-.tech-data-list h3{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75%;
-  height: 100%;
-  background: var(--indigo);
-  color: var(--navbar);
-  border-radius: 2px 2px 11px 11px;
-  transition: all 300ms ease-out;
-  font-size: var(--smallfont);
-  font-weight: 600;
-  margin: 2em auto;
-  cursor: pointer;
-}
-
-.tech-data-list a{
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.tech-data-list a,
-.dataHeader h3{
-  padding: 1.5em;
-  color: inherit;
-}
-
-.tech-data-list h3:hover{
-  background: var(--navbar);
-  color: black;
-}
-
-.dataHeader.hidden .dataItem{
-  display: none;
-}
-
-.dataItem{
-  background-color: var(--indigo);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-  width: 75%;
-  margin: auto;
-  padding: 2em;
-  transition: all 250ms ease-in-out;
-  border-radius: 2px 2px 3em 3em;
-}
-
-.dataItem a{
-  background-color: var(--darkgrey);
-  width: fit-content;
-  text-align: center;
-  padding: 1.5em 3em;
-  border-radius: 3em;
-  margin: 1.5em 0;
-  color: black;
-  font-weight: 700;
-}
-
-.dataItem.active{
-  display: flex;
-}
-
 #tech-data-outer{
   display: flex;
-  gap: 2rem;
   background: var(--grey);
   height: fit-content;
-  padding: 4rem;
+  padding: 4rem 10rem;
   justify-content: center;
 }
 
 #tech-data-nav{
   position: sticky;
-  top: 10rem;
+  top: 11rem;
   height: fit-content;
   width: 22%;
   max-width: 25em;
@@ -1354,6 +1273,86 @@ h1::after{
 #tech-data-nav .data-nav-active a{
   background: var(--navbar);
   color: black;
+}
+
+.tech-data{
+  position: relative;
+}
+
+.tech-data-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  /* grid-auto-rows: 7rem; */
+  align-items: center;
+  justify-content: center;
+  background: var(--diaggradient6);
+  padding: 2rem;
+  width: 38%;
+}
+
+.tech-data-list h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  max-width: 20em;
+  height: 100%;
+  background: var(--indigo);
+  border-radius: 2px 2px 11px 11px;
+  transition: all 300ms ease-out;
+  font-size: var(--smallfont);
+  font-weight: 600;
+  margin: 2em auto;
+  cursor: pointer;
+}
+
+.tech-data-list a{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tech-data-list a,
+.dataHeader h3{
+  padding: 1.5em;
+  color: var(--navbar);
+}
+
+.tech-data-list h3:hover{
+  background: var(--navbar);
+  color: black;
+}
+
+.dataHeader.hidden .dataItem{
+  display: none;
+}
+
+.dataItem{
+  background-color: var(--indigo);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  width: 75%;
+  margin: auto;
+  padding: 2em;
+  transition: all 250ms ease-in-out;
+  border-radius: 2px 2px 3em 3em;
+}
+
+.dataItem a{
+  background-color: var(--darkgrey);
+  width: fit-content;
+  text-align: center;
+  padding: 1.5em 3em;
+  border-radius: 3em;
+  margin: 1.5em 0;
+  color: black;
+  font-weight: 700;
+}
+
+.dataItem.active{
+  display: flex;
 }
 
 /* Contact page */
