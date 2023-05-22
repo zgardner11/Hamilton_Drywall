@@ -1252,6 +1252,7 @@ h1::after{
 .tech-data-list a,
 .dataHeader h3{
   padding: 1.5em;
+  color: inherit;
 }
 
 .tech-data-list h3:hover{
