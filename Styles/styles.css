@@ -234,7 +234,7 @@ button{
   color: var(--logored);
 }
 .navlinks ul li > a:hover::after{
-  width: 50%;
+  width: 20%;
 }
 .navlinks ul > li:hover .dropdown-nav{
   display: block;
@@ -1484,27 +1484,6 @@ and (max-device-width: 1240px)
     align-self: flex-end;
   }
   
-  .video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: -999;
-    width: 100%;
-  }
-  
-  .homevid {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: auto;
-    left: none;
-    right: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
   .logo-wrapper{
     display: flex;
     margin: 1em auto 0;
@@ -1596,12 +1575,8 @@ and (max-device-width: 1240px)
     font-size: var(--smallfont);
   }
 
-  ul .book-button{
-    display: none;
-  }
-
   .dropdown-nav{
-    display:none;
+    display: none;
     pointer-events: none;
   }
   
