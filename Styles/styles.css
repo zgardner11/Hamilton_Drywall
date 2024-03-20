@@ -327,9 +327,11 @@ nav a::before {
   color: var(--darkblue);
 }
 
-.dropdown-nav ul li:last-child a{
-  color: var(--logored);
-}
+/* make catalog in nav red */
+
+/* .dropdown-nav ul li:last-child a{
+  color: var(--logored); 
+} */
 
 .navlinks .active-nav{
   color: var(--darkred);
@@ -685,7 +687,7 @@ h1::after{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 7rem 0;
+  padding: 2.5rem 0;
   border-bottom: rgba(0, 0, 0, 0.285) solid 1.5px;
   width: 100%;
   gap: 5em;
@@ -715,7 +717,7 @@ h1::after{
   align-items: center;
   border-bottom: var(--navbar) solid 2px;
   width: 100%;
-  padding: 11em 0;
+  padding: 2.5em 0;
 }
 
 .product:nth-child(even){
@@ -737,7 +739,7 @@ h1::after{
 
 .product-img img{
   max-width: 15rem;
-  margin: 2rem auto;
+  margin: auto;
   transition: all 250ms ease-in-out;
 }
 
@@ -757,7 +759,7 @@ h1::after{
   display: flex;
   flex: .7;
   height: 20em;
-  margin: auto;
+  margin: 0 auto;
   background: var(--navbar);
   border: var(--navbar) solid 2px;
   border-radius: 2px 11px 2px 7px;
@@ -982,7 +984,11 @@ h1::after{
 /* Cornerbeads */
 
 .product-pdf{
-  padding: 7em;
+  padding: 2.5rem;
+}
+
+#bullnose .product-pdf{
+  padding: 7rem;
 }
 
 #flat-strap .product-pdf,
@@ -1439,8 +1445,8 @@ transform: scale(1.02);
 
 /* General responsiveness */
 
-@media (min-device-width: 280px) 
-and (max-device-width: 1240px) 
+@media (min-width: 280px) 
+and (max-width: 1240px) 
 {
 
   body,html {
