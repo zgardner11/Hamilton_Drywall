@@ -1446,7 +1446,7 @@ transform: scale(1.02);
 /* General responsiveness */
 
 @media (min-width: 280px) 
-and (max-width: 1240px) 
+and (max-width: 1420px) 
 {
 
   body,html {
