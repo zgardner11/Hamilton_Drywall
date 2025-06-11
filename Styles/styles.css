@@ -318,20 +318,12 @@ nav a::before {
 }
 
 .dropdown-nav ul li:last-child{
-  color: var(--logored);
   font-weight: 700;
-  font-style: italic;
 }
 
 .dropdown-nav ul li a{
   color: var(--darkblue);
 }
-
-/* make catalog in nav red */
-
-/* .dropdown-nav ul li:last-child a{
-  color: var(--logored); 
-} */
 
 .navlinks .active-nav{
   color: var(--darkred);
