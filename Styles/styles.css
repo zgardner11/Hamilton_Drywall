@@ -11,14 +11,14 @@
   --navbar:#e2e7ed;
   --lightblue: rgb(144, 165, 186);  
   --silverblue: #b1c6d9;
-  --darkblue: rgb(100, 113, 131);
+  --darkblue: rgb(110, 117, 129);
   --darkblue2:#304769ed;
   --indigo:#171625;
   --purple: #0f0024;
   --green: #295b39;
-  --grey: rgb(202, 208, 214);
+  --grey: rgb(200, 210, 210);
   --darkgrey: rgb(143, 156, 172);
-  --darkgrey2: rgb(108, 114, 127);
+  --darkgrey2: rgb(117, 120, 125);
   --white:hsla(192, 10%, 90%, 0.979);
 
   --main-bg-color: linear-gradient(
